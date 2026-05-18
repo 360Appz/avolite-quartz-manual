@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avolites Quartz — Complete Titan v19 Manual Guide</title>
+<meta name="description" content="Complete A–Z interactive manual guide for the Avolites Quartz lighting console — every feature, sub-feature, setting and function from the official Titan v19 manual.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/tabler-icons.min.css">
+</head>
+<body>
+<div id="app">
+<h2 class="sr-only">Avolites Quartz complete A-Z interactive manual guide for beginners — every feature, sub-feature, setting, and function from the official Titan v19 manual</h2>
+<style>
+.gh{background:var(--red);color:#fff;padding:1.1rem 1.4rem 0.9rem;border-radius:var(--border-radius-lg) var(--border-radius-lg) 0 0}
+.gh h1{font-size:19px;font-weight:500;margin-bottom:3px}
+.gh p{font-size:12px;opacity:.88}
+.pb{height:3px;background:rgba(255,255,255,.28)}
+.pf{height:100%;background:#fff;transition:width .3s;width:5%}
+.tabs{display:flex;overflow-x:auto;background:var(--color-background-secondary);border-bottom:0.5px solid var(--color-border-tertiary);scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex-shrink:0;padding:9px 11px;font-size:11px;font-weight:500;color:var(--color-text-secondary);cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;white-space:nowrap;display:flex;align-items:center;gap:4px;transition:all .15s}
+.tab:hover{color:var(--color-text-primary);background:var(--color-background-primary)}
+.tab.act{color:var(--red);border-bottom-color:var(--red);background:var(--color-background-primary)}
+.tab i{font-size:13px}
+.sec{display:none;padding:1.1rem 1.3rem 1.4rem;background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-top:none}
+.sec.act{display:block}
+.stitle{font-size:16px;font-weight:500;color:var(--color-text-primary);margin-bottom:5px;display:flex;align-items:center;gap:7px}
+.stitle i{color:var(--red);font-size:18px}
+.sintro{font-size:13px;color:var(--color-text-secondary);margin-bottom:1.1rem;line-height:1.6}
+.h3{font-size:13px;font-weight:500;color:var(--color-text-primary);margin:1rem 0 6px;border-left:3px solid var(--red);padding-left:8px;border-radius:0}
+.row{display:flex;gap:8px;padding:8px 0;border-bottom:0.5px solid var(--color-border-tertiary);font-size:12px;align-items:flex-start}
+.row:last-child{border-bottom:none}
+.badge{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 5px;border-radius:4px;background:var(--red);color:#fff;font-size:10px;font-weight:500;flex-shrink:0}
+.badge.bl{background:var(--color-background-info);color:var(--color-text-info)}
+.badge.bg{background:var(--color-background-success);color:var(--color-text-success)}
+.badge.bw{background:var(--color-background-warning);color:var(--color-text-warning)}
+.rlab{font-weight:500;color:var(--color-text-primary);min-width:120px;flex-shrink:0}
+.rdesc{color:var(--color-text-secondary);line-height:1.5;flex:1}
+.tip{background:var(--color-background-info);border:0.5px solid var(--color-border-info);border-radius:var(--border-radius-md);padding:.65rem .9rem;margin:.75rem 0;font-size:12px;color:var(--color-text-info);display:flex;gap:7px;line-height:1.55}
+.tip i{font-size:14px;flex-shrink:0;margin-top:1px}
+.warn{background:var(--color-background-warning);border:0.5px solid var(--color-border-warning);border-radius:var(--border-radius-md);padding:.65rem .9rem;margin:.75rem 0;font-size:12px;color:var(--color-text-warning);display:flex;gap:7px;line-height:1.55}
+.warn i{font-size:14px;flex-shrink:0;margin-top:1px}
+.danger{background:var(--color-background-danger);border:0.5px solid var(--color-border-danger);border-radius:var(--border-radius-md);padding:.65rem .9rem;margin:.75rem 0;font-size:12px;color:var(--color-text-danger);display:flex;gap:7px;line-height:1.55}
+.danger i{font-size:14px;flex-shrink:0;margin-top:1px}
+.kp{display:flex;flex-wrap:wrap;gap:5px;margin:5px 0;align-items:center}
+.k{background:var(--color-background-secondary);border:0.5px solid var(--color-border-secondary);border-radius:4px;padding:2px 7px;font-size:11px;font-weight:500;color:var(--color-text-primary);font-family:var(--font-mono)}
+.karr{color:var(--color-text-tertiary);font-size:12px}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin:.75rem 0}
+.card{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:.75rem .9rem}
+.clbl{font-size:10px;font-weight:500;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.cval{font-size:14px;font-weight:500;color:var(--color-text-primary)}
+.csub{font-size:11px;color:var(--color-text-secondary);margin-top:3px;line-height:1.5}
+.tbl{width:100%;border-collapse:collapse;font-size:12px;margin:.6rem 0}
+.tbl th{text-align:left;padding:6px 8px;border-bottom:0.5px solid var(--color-border-secondary);font-weight:500;color:var(--color-text-secondary);font-size:10px;text-transform:uppercase;letter-spacing:.04em}
+.tbl td{padding:7px 8px;border-bottom:0.5px solid var(--color-border-tertiary);color:var(--color-text-primary);vertical-align:top;line-height:1.45}
+.tbl tr:last-child td{border-bottom:none}
+.pill{display:inline-block;padding:1px 7px;border-radius:20px;font-size:10px;font-weight:500}
+.pill-r{background:#fde8ec;color:var(--red)}
+.pill-b{background:var(--color-background-info);color:var(--color-text-info)}
+.pill-g{background:var(--color-background-success);color:var(--color-text-success)}
+.pill-w{background:var(--color-background-warning);color:var(--color-text-warning)}
+.mapitem{display:flex;align-items:center;gap:9px;padding:8px 10px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);cursor:pointer;background:var(--color-background-secondary);transition:all .15s;margin-bottom:5px}
+.mapitem:hover{border-color:var(--red);background:var(--color-background-primary)}
+.mapicon{color:var(--red);font-size:16px;width:20px;text-align:center}
+.maptitle{font-size:12px;font-weight:500;color:var(--color-text-primary)}
+.mapsub{font-size:11px;color:var(--color-text-secondary)}
+.maparr{margin-left:auto;color:var(--color-text-tertiary);font-size:13px}
+.steplist{list-style:none}
+.step{display:flex;gap:10px;padding:9px 0;border-bottom:0.5px solid var(--color-border-tertiary);align-items:flex-start}
+.step:last-child{border-bottom:none}
+.snum{width:24px;height:24px;min-width:24px;border-radius:50%;background:var(--red);color:#fff;font-size:11px;font-weight:500;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.sbody{flex:1}
+.stit{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:2px}
+.sdesc{font-size:12px;color:var(--color-text-secondary);line-height:1.55}
+.footer{display:flex;justify-content:space-between;align-items:center;padding:.7rem 1.3rem;background:var(--color-background-secondary);border-top:0.5px solid var(--color-border-tertiary);border-radius:0 0 var(--border-radius-lg) var(--border-radius-lg);gap:8px;flex-wrap:wrap}
+.nbtn{padding:6px 14px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-primary);color:var(--color-text-primary);font-size:12px;cursor:pointer;display:flex;align-items:center;gap:5px;transition:all .15s}
+.nbtn:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.nbtn:disabled{opacity:.35;cursor:default}
+.nbtn:disabled:hover{background:var(--color-background-primary);color:var(--color-text-primary);border-color:var(--color-border-secondary)}
+.sctr{font-size:11px;color:var(--color-text-secondary)}
+.subsec{border-left:2px solid var(--color-border-tertiary);padding-left:10px;margin:8px 0}
+</style>
+
+<div style="border-radius:var(--border-radius-lg);overflow:hidden;border:0.5px solid var(--color-border-tertiary)">
+
+<div class="gh">
+  <h1><i class="ti ti-adjustments-horizontal" aria-hidden="true"></i> Avolites Quartz — complete A-Z manual guide</h1>
+  <p>Every feature, sub-feature, setting and function from the Titan v19 official manual. Verified against manual.avolites.com</p>
+</div>
+<div class="pb"><div class="pf" id="pf"></div></div>
+
+<div class="tabs" id="tabs">
+<button class="tab act" onclick="go(0)"><i class="ti ti-map-2"></i>Map</button>
+<button class="tab" onclick="go(1)"><i class="ti ti-cpu"></i>Hardware</button>
+<button class="tab" onclick="go(2)"><i class="ti ti-plug"></i>Setup</button>
+<button class="tab" onclick="go(3)"><i class="ti ti-layout"></i>Workspace</button>
+<button class="tab" onclick="go(4)"><i class="ti ti-topology-star-3"></i>Patching</button>
+<button class="tab" onclick="go(5)"><i class="ti ti-hand-finger"></i>Selecting</button>
+<button class="tab" onclick="go(6)"><i class="ti ti-adjustments"></i>Attributes</button>
+<button class="tab" onclick="go(7)"><i class="ti ti-users-group"></i>Groups</button>
+<button class="tab" onclick="go(8)"><i class="ti ti-palette"></i>Palettes</button>
+<button class="tab" onclick="go(9)"><i class="ti ti-player-play"></i>Cues</button>
+<button class="tab" onclick="go(10)"><i class="ti ti-refresh"></i>Chases</button>
+<button class="tab" onclick="go(11)"><i class="ti ti-list-numbers"></i>Cue Lists</button>
+<button class="tab" onclick="go(12)"><i class="ti ti-timeline"></i>Timelines</button>
+<button class="tab" onclick="go(13)"><i class="ti ti-sparkles"></i>Effects</button>
+<button class="tab" onclick="go(14)"><i class="ti ti-box"></i>Visualiser</button>
+<button class="tab" onclick="go(15)"><i class="ti ti-run"></i>Show Run</button>
+<button class="tab" onclick="go(16)"><i class="ti ti-device-mobile"></i>Remote</button>
+<button class="tab" onclick="go(17)"><i class="ti ti-network"></i>Network</button>
+<button class="tab" onclick="go(18)"><i class="ti ti-settings"></i>System</button>
+<button class="tab" onclick="go(19)"><i class="ti ti-video"></i>Synergy</button>
+</div>
+
+<div id="s0" class="sec act">
+  <p class="stitle"><i class="ti ti-map-2"></i>Complete guide map</p>
+  <p class="sintro">This guide covers every page of the official Titan v19 manual for the Quartz. 20 sections — click any below to jump directly to it.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px">
+    <div class="mapitem" onclick="go(1)"><i class="ti ti-cpu mapicon"></i><div><div class="maptitle">Hardware</div><div class="mapsub">All buttons A–R, rear panel, specs</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(2)"><i class="ti ti-plug mapicon"></i><div><div class="maptitle">Setup</div><div class="mapsub">Power, DMX, boot, monitor, saving</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(3)"><i class="ti ti-layout mapicon"></i><div><div class="maptitle">Workspace</div><div class="mapsub">Windows, legends, show library</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(4)"><i class="ti ti-topology-star-3 mapicon"></i><div><div class="maptitle">Patching</div><div class="mapsub">Dimmers, moving lights, RDM, sub-fixtures</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(5)"><i class="ti ti-hand-finger mapicon"></i><div><div class="maptitle">Selecting fixtures</div><div class="mapsub">Channel menu, patterns, Select If, HiLight</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(6)"><i class="ti ti-adjustments mapicon"></i><div><div class="maptitle">Attributes &amp; programmer</div><div class="mapsub">IPCGBES, wheels, Clear options, Locate</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(7)"><i class="ti ti-users-group mapicon"></i><div><div class="maptitle">Groups &amp; layouts</div><div class="mapsub">Creating groups, fixture order, Layout windows</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(8)"><i class="ti ti-palette mapicon"></i><div><div class="maptitle">Palettes</div><div class="mapsub">Types, timing, update, import, quick palettes</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(9)"><i class="ti ti-player-play mapicon"></i><div><div class="maptitle">Cues</div><div class="mapsub">Record modes, timing, editing, playback options</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(10)"><i class="ti ti-refresh mapicon"></i><div><div class="maptitle">Chases</div><div class="mapsub">Steps, speed, crossfade, direction, connect</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(11)"><i class="ti ti-list-numbers mapicon"></i><div><div class="maptitle">Cue lists</div><div class="mapsub">Tracking, MiD, autoload, timecode, macros</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(12)"><i class="ti ti-timeline mapicon"></i><div><div class="maptitle">Timelines</div><div class="mapsub">Trigger types, smooth, offset, live record</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(13)"><i class="ti ti-sparkles mapicon"></i><div><div class="maptitle">Effects</div><div class="mapsub">Shape generator, key frame, pixel mapper</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(14)"><i class="ti ti-box mapicon"></i><div><div class="maptitle">Capture visualiser</div><div class="mapsub">3D stage, auto-patch, blind mode</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(15)"><i class="ti ti-run mapicon"></i><div><div class="maptitle">Running the show</div><div class="mapsub">Playback controls, blind, lock, venue mode</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(16)"><i class="ti ti-device-mobile mapicon"></i><div><div class="maptitle">Remote control</div><div class="mapsub">Titan Remote app, iOS &amp; Android</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(17)"><i class="ti ti-network mapicon"></i><div><div class="maptitle">Networking</div><div class="mapsub">Art-Net, sACN, TNP, multi-console, backup</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(18)"><i class="ti ti-settings mapicon"></i><div><div class="maptitle">System settings</div><div class="mapsub">Key profiles, user settings, DMX mapping, curves</div></div><i class="ti ti-chevron-right maparr"></i></div>
+    <div class="mapitem" onclick="go(19)"><i class="ti ti-video mapicon"></i><div><div class="maptitle">Synergy</div><div class="mapsub">Ai integration, Lightmap, video surfaces</div></div><i class="ti ti-chevron-right maparr"></i></div>
+  </div>
+  <div class="tip" style="margin-top:10px"><i class="ti ti-info-circle"></i><span>Key press format used throughout: <span style="font-family:var(--font-mono);font-size:11px">[ Button ]</span> <span style="font-family:var(--font-mono);font-size:11px">&gt;</span> <span style="font-family:var(--font-mono);font-size:11px">[ Button ]</span> <span style="font-family:var(--font-mono);font-size:11px">&gt;</span> <span style="font-family:var(--font-mono);font-size:11px">[Softkey]</span>. Softkeys A–G are on the right side of screen — their label changes with every action.</span></div>
+</div>
+
+<div id="s1" class="sec">
+  <p class="stitle"><i class="ti ti-cpu"></i>Hardware — every physical element</p>
+  <p class="sintro">The Quartz measures 42.5 cm wide. Every physical element is labelled A–R in the official manual. The console runs Windows internally and boots Titan software.</p>
+  <p class="h3">Front panel — labelled A to N</p>
+  <div class="row"><span class="badge">A</span><span class="rlab">Workspace windows</span><span class="rdesc">12.1" touchscreen — shows up to 4 windows simultaneously. Touch buttons for fixtures, groups, palettes, playbacks, macros, and more.</span></div>
+  <div class="row"><span class="badge">B</span><span class="rlab">System display &amp; menu</span><span class="rdesc">Top-right of touchscreen. Shows what the console is currently doing — menus, attribute values, cue information, timers.</span></div>
+  <div class="row"><span class="badge">C</span><span class="rlab">Menu softkeys (A–G)</span><span class="rdesc">7 physical buttons. Labels on screen change with every action. Always read the screen — they are your primary navigation tool in every menu.</span></div>
+  <div class="row"><span class="badge">D</span><span class="rlab">Playback faders ×10</span><span class="rdesc">Store and play cues, chases, cue lists, and timelines. Push up = intensity up (HTP). Pull down = fade out. The fader handles are precision quality.</span></div>
+  <div class="row"><span class="badge">E</span><span class="rlab">Page select buttons</span><span class="rdesc">Switch between pages of playbacks. Each page holds 10 fader assignments. Unlimited pages available. Running playbacks survive page changes.</span></div>
+  <div class="row"><span class="badge">F</span><span class="rlab">Attribute control wheels ×3</span><span class="rdesc">Physical rotary encoders. Turn to precisely adjust the attribute currently assigned to each wheel. Bottom-right of screen shows what each wheel controls.</span></div>
+  <div class="row"><span class="badge">G</span><span class="rlab">Attribute select buttons</span><span class="rdesc">Choose which IPCGBES group the wheels control. Buttons illuminate when active. Also access Fan, Shapes, and other attribute functions here.</span></div>
+  <div class="row"><span class="badge">H</span><span class="rlab">Chase/cue list controls</span><span class="rdesc">Go (advance), Stop, Back (previous), and Connect buttons. Go steps cue lists forward. Connect assigns the buttons to a specific playback.</span></div>
+  <div class="row"><span class="badge">I</span><span class="rlab">Numeric keypad</span><span class="rdesc">Enter DMX addresses, cue numbers, percentages, timing values, and fixture numbers. Also contains AND, THRO, NOT, @ function buttons.</span></div>
+  <div class="row"><span class="badge">J</span><span class="rlab">Function buttons</span><span class="rdesc">Record, Copy, Move, Delete, Undo, Include, Release, Macro, View/Open, Patch, and the critical Avo button (hold for shifted functions).</span></div>
+  <div class="row"><span class="badge">L</span><span class="rlab">Workspace/Macro/Executor buttons</span><span class="rdesc">Programmable touch buttons. Store workspace layouts, button macros, or assign cues/playbacks directly. Key profiles control their behaviour.</span></div>
+  <div class="row"><span class="badge">M</span><span class="rlab">Workspace window select buttons</span><span class="rdesc">Open or close specific workspace windows on screen. Double-press Open/View to show all window options.</span></div>
+  <div class="row"><span class="badge">N</span><span class="rlab">Panel reset switch (pinhole)</span><span class="rdesc">Use a paperclip to restart front panel electronics if faders or buttons freeze. Main processor and show file are unaffected. DMX output briefly interrupts during reset.</span></div>
+  <p class="h3">Rear connections panel — labelled O to R</p>
+  <div class="row"><span class="badge bw">O</span><span class="rlab">Rear power isolator</span><span class="rdesc" style="color:var(--color-text-warning)">NEVER use this to turn off the console. It cuts power without software shutdown — you will lose data. Only use the front power button.</span></div>
+  <div class="row"><span class="badge">P</span><span class="rlab">Network / DVI / Audio in</span><span class="rdesc">RJ45/EtherCON for Art-Net and sACN. DVI port for external monitor. 3.5mm audio line-in for sound-to-light triggering.</span></div>
+  <div class="row"><span class="badge">Q</span><span class="rlab">4× DMX XLR + MIDI in</span><span class="rdesc">Four 5-pin XLR direct DMX outputs. MIDI input for timecode (SMPTE/MTC) or external triggering. Pin 1=Earth, Pin 2=Data–, Pin 3=Data+, Pins 4&amp;5 unused.</span></div>
+  <div class="row"><span class="badge">R</span><span class="rlab">Rear USB port</span><span class="rdesc">Connect a Titan Mobile Wing (adds 20 faders + 50 executor buttons) or an external touchscreen for extra workspace.</span></div>
+  <p class="h3">Key specifications</p>
+  <div class="cgrid">
+    <div class="card"><div class="clbl">DMX universes (onboard)</div><div class="cval">12 universes</div><div class="csub">6,144 DMX channels direct from console</div></div>
+    <div class="card"><div class="clbl">DMX universes (with TNPs)</div><div class="cval">Up to 64</div><div class="csub">Via TitanNet Processors on network</div></div>
+    <div class="card"><div class="clbl">Playback faders</div><div class="cval">10 faders</div><div class="csub">Unlimited pages</div></div>
+    <div class="card"><div class="clbl">Touchscreen</div><div class="cval">12.1 inch</div><div class="csub">Up to 4 workspace windows</div></div>
+    <div class="card"><div class="clbl">Voltage input</div><div class="cval">80–260V AC</div><div class="csub">Auto-switching, worldwide use</div></div>
+    <div class="card"><div class="clbl">Internal UPS</div><div class="cval">None</div><div class="csub">External UPS strongly recommended</div></div>
+    <div class="card"><div class="clbl">Wing expansion</div><div class="cval">Titan Mobile Wing</div><div class="csub">USB, 20 faders + 50 executors</div></div>
+    <div class="card"><div class="clbl">Boot time</div><div class="cval">~90 seconds</div><div class="csub">Windows OS + Titan software</div></div>
+  </div>
+  <div class="warn"><i class="ti ti-alert-triangle"></i><span>No internal UPS. If power cuts mid-show you lose all programming since the last autosave. Always run through an external UPS. Note: consoles such as D9, D7, Arena, Sapphire Touch can have internal UPS — Quartz cannot.</span></div>
+</div>
+
+<div id="s2" class="sec">
+  <p class="stitle"><i class="ti ti-plug"></i>First-time setup</p>
+  <p class="sintro">From unboxing to working DMX output. Follow these steps in order every time you set up the console.</p>
+  <ul class="steplist">
+    <li class="step"><div class="snum">1</div><div class="sbody"><div class="stit">Connect power via UPS</div><div class="sdesc">Plug the Quartz into an external UPS, then the UPS into mains. Auto-switching 80–260V — no voltage selector needed. Never use the rear isolator switch to power off.</div></div></li>
+    <li class="step"><div class="snum">2</div><div class="sbody"><div class="stit">Power on via front panel button</div><div class="sdesc">Press and release the front power switch. Console takes ~90 seconds to boot. A radio transmitter on or behind the console may cause interference — keep them away or behind you.</div></div></li>
+    <li class="step"><div class="snum">3</div><div class="sbody"><div class="stit">Titan Healthcheck</div><div class="sdesc">On every boot, Titan checks file system and firmware. If issues found, a fix screen appears. Only run fixes if you have time — some take up to an hour. Skip on show day.</div></div></li>
+    <li class="step"><div class="snum">4</div><div class="sbody"><div class="stit">Load or start a show</div><div class="sdesc">Select "New Show" for blank or "Load Show" for existing file. You can load from internal storage or USB stick.</div><div class="kp"><span class="k">Disk</span><span class="karr">→</span><span class="k">[Load Show]</span></div></div></li>
+    <li class="step"><div class="snum">5</div><div class="sbody"><div class="stit">Connect DMX lines</div><div class="sdesc">5-pin XLR outputs on rear. Daisy-chain all fixtures on a universe in sequence. Fit a 120Ω terminator (resistor between pins 2 and 3) at the end of each run. Never use passive Y-splitters — they corrupt DMX data. Use active DMX splitters/buffers only.</div><div class="tip" style="margin-top:6px"><i class="ti ti-info-circle"></i><span>To patch to a specific universe and address, type: <span style="font-family:var(--font-mono);font-size:11px">2.56</span> = universe 2, address 56. If a patch goes over 512 channels, console auto-wraps to the start of the next universe.</span></div></div></li>
+    <li class="step"><div class="snum">6</div><div class="sbody"><div class="stit">Enable external monitor (optional)</div><div class="sdesc">Connect via DVI port. Then enable in software:</div><div class="kp"><span class="k">Avo</span><span class="karr">+</span><span class="k">Disk</span><span class="karr">→</span><span class="k">[Display Setup]</span><span class="karr">→</span><span class="k">[External Display Disconnected]</span></div><div class="sdesc" style="margin-top:4px">Toggle changes to "External Display Connected". Lock screen background size for Quartz: 1280×800 px.</div></div></li>
+    <li class="step"><div class="snum">7</div><div class="sbody"><div class="stit">Set desk lamp brightness</div><div class="sdesc">1–2 XLR 3-pin desk lamp sockets on rear (12V DC, pin 1=–, pin 2=+). Adjust brightness via wheels while in System mode.</div><div class="kp"><span class="k">Avo</span><span class="karr">+</span><span class="k">Disk</span><span class="karr">→</span>use attribute wheels</div></div></li>
+    <li class="step"><div class="snum">8</div><div class="sbody"><div class="stit">Save your show regularly</div><div class="sdesc">Titan autosaves periodically, but always save manually before making big changes and after each session. Save to USB for offsite backup.</div><div class="kp"><span class="k">Disk</span><span class="karr">→</span><span class="k">[Save Show]</span></div></div></li>
+    <li class="step"><div class="snum">9</div><div class="sbody"><div class="stit">Shut down correctly — always</div><div class="sdesc">Press front power button once. Wait ~30 seconds for controlled Windows shutdown. Forced shutdown: hold power 5 seconds (loses unsaved data since last autosave).</div></div></li>
+  </ul>
+  <p class="h3">Connecting other devices</p>
+  <div class="row"><span class="badge bl">USB</span><span class="rlab">Keyboard &amp; mouse</span><span class="rdesc">Connect via USB. If using an external non-touch monitor with no console keyboard, a mouse is required to click buttons on it. Use a USB hub if out of ports.</span></div>
+  <div class="row"><span class="badge bl">MIDI</span><span class="rlab">MIDI input</span><span class="rdesc">5-pin DIN MIDI in for timecode (MTC) or show control triggers. USB-MIDI devices also work. MIDI cannot be used with T1, but can with T2/T3 via USB-MIDI adapter.</span></div>
+  <div class="row"><span class="badge bl">SMPTE</span><span class="rlab">SMPTE/LTC timecode in</span><span class="rdesc">Some consoles include SMPTE input — check hardware. Links the console to a frame-accurate timecode source for locked cue lists.</span></div>
+  <div class="row"><span class="badge bl">LAN</span><span class="rlab">Network (EtherCON/RJ45)</span><span class="rdesc">Connect to your lighting network for Art-Net/sACN universes, multi-console, backup console, and TNP expansion.</span></div>
+</div>
+
+<div id="s3" class="sec">
+  <p class="stitle"><i class="ti ti-layout"></i>Workspace windows</p>
+  <p class="sintro">The touchscreen shows up to 4 workspace windows simultaneously. You control which windows appear, their size, and position. Window layouts can be saved as Workspaces for quick recall.</p>
+  <p class="h3">Opening and managing windows</p>
+  <div class="row"><span class="badge">Open</span><span class="rlab">Open a window</span><span class="rdesc">Press Open/View then the window select button (M). Or double-press Open/View to see all window options.</span></div>
+  <div class="row"><span class="badge">Size</span><span class="rlab">Resize a window</span><span class="rdesc">Use the min/max button (above numeric keypad) to toggle between full screen and quarter size. The size/position button cycles positions.</span></div>
+  <div class="row"><span class="badge">Move</span><span class="rlab">Move to other screen</span><span class="rdesc">Touch the window's Options (cog icon) then select [Move Screen] to move a window to the external monitor.</span></div>
+  <div class="row"><span class="badge">Context</span><span class="rlab">Window context buttons</span><span class="rdesc">Each window has context buttons (top-right, or accessible via the menu/down button on Sapphire Touch and Titan Go). These change what the window does.</span></div>
+  <p class="h3">All available workspace windows</p>
+  <table class="tbl">
+    <tr><th>Window</th><th>What it shows / does</th></tr>
+    <tr><td>Fixtures</td><td>Touch buttons to select patched lights. Shows page buttons or scroll bar. Buttons turn pale blue when selected, darker blue when in programmer.</td></tr>
+    <tr><td>Groups</td><td>Stored fixture selections. Touch to instantly select all fixtures in that group.</td></tr>
+    <tr><td>Palettes</td><td>Stored looks — colour, position, gobo, beam, timing. Divided by type or shown together.</td></tr>
+    <tr><td>Playbacks</td><td>View of all cues on faders and executor buttons, with legends.</td></tr>
+    <tr><td>Intensity</td><td>Channel grid showing live dimmer levels for all fixtures. Editable directly.</td></tr>
+    <tr><td>Attribute Editor</td><td>Visual interface for setting attributes — colour picker, gobo thumbnails, position grid.</td></tr>
+    <tr><td>Channel Grid</td><td>Spreadsheet view of all fixture attributes and their current values. Edit directly.</td></tr>
+    <tr><td>Cue List View</td><td>Expanded view of a cue list — all cues, timing, tracking state, notes.</td></tr>
+    <tr><td>Chase View</td><td>Lists all steps in a chase with timing and attribute values.</td></tr>
+    <tr><td>Shape Generator</td><td>Controls for running shapes — speed, size, spread.</td></tr>
+    <tr><td>Pixel Map Preview</td><td>Live view of pixel mapper output overlaid on fixture grid.</td></tr>
+    <tr><td>Capture Visualiser</td><td>Integrated 3D stage view — see your lighting without the rig.</td></tr>
+    <tr><td>DMX (Output View)</td><td>Shows raw DMX values being sent on every channel of every universe.</td></tr>
+    <tr><td>Patch View</td><td>Spreadsheet of all patched fixtures — address, universe, mode, handle.</td></tr>
+    <tr><td>Active Playbacks</td><td>Shows all currently running playbacks across all pages.</td></tr>
+    <tr><td>Playback Groups</td><td>Groups of mutually exclusive playbacks (only one can be active at a time).</td></tr>
+    <tr><td>Virtual Faders</td><td>On-screen faders — work exactly like physical faders, useful for touch-screen shows.</td></tr>
+    <tr><td>Set List</td><td>Song list that recalls workspaces and cue lists automatically per song.</td></tr>
+    <tr><td>Timelines</td><td>Timeline editor — trigger editor, overview bar, marker management. (Titan v15+)</td></tr>
+    <tr><td>Event Log</td><td>Records console events, errors, and timecode hits for diagnostics.</td></tr>
+    <tr><td>Macro</td><td>View and trigger stored button macros.</td></tr>
+    <tr><td>HUD</td><td>Legacy heads-up display with fixture, attribute, and playback status info.</td></tr>
+    <tr><td>Video Multi View</td><td>Monitor up to 6 NDI streams from Synergy/Ai servers simultaneously.</td></tr>
+    <tr><td>Pioneer DJ</td><td>Displays BPM and beat grid info from linked Pioneer DJ system.</td></tr>
+    <tr><td>Layouts</td><td>Custom 2D layout of your physical rig for position-based control.</td></tr>
+  </table>
+  <p class="h3">Saving workspace layouts</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:8px">Save a window arrangement to a Workspace button for instant recall. Workspace buttons are to the left of the menu softkeys (or on external screens). You can save per-screen or all-screen layouts.</div>
+  <div class="kp"><span class="k">Open/View</span><span class="karr">+</span><span class="k">Open/View</span><span class="karr">→</span><span class="k">[Record Workspace]</span><span class="karr">→</span>touch workspace button</div>
+  <p class="h3">Legends and picture legends</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6">Every handle, palette button, and cue can have a text legend and/or a picture legend (hand-drawn icon on touchscreen). Colour-coded legends make navigation faster.</div>
+  <div class="kp"><span class="k">Legend</span><span class="karr">→</span>touch button<span class="karr">→</span>type text or draw icon</div>
+  <p class="h3">Show Library</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">The Show Library lets you import palettes, groups, cues, and other elements from a different show file into your current show. Useful for building shows from templates or combining shows.</div>
+  <div class="kp"><span class="k">Open/View</span><span class="karr">→</span><span class="k">[Show Library]</span><span class="karr">→</span>browse and import items</div>
+  <p class="h3">Creating reports</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6">Titan can generate a printed/PDF report of your patch, cue list, or entire show. Useful for giving a paper copy to stage managers or archive documentation.</div>
+  <div class="kp"><span class="k">Open/View</span><span class="karr">→</span><span class="k">[Reports]</span></div>
+</div>
+
+<div id="s4" class="sec">
+  <p class="stitle"><i class="ti ti-topology-star-3"></i>Patching</p>
+  <p class="sintro">Patching tells Titan what lights you have, where they are on DMX, and which button controls them. You must patch every fixture before you can control it. The Patch View window (Open/View → Patch) shows your complete patch at any time.</p>
+  <div class="tip"><i class="ti ti-bulb"></i><span>Plan DMX addresses on the console before you start rigging. Patch in Titan (or Simulator), then view the Patch View window to see the most efficient channel allocation without gaps.</span></div>
+  <p class="h3">Patching dimmers</p>
+  <ul class="steplist">
+    <li class="step"><div class="snum">1</div><div class="sbody"><div class="stit">Open patch, select Dimmers</div><div class="kp"><span class="k">Patch</span><span class="karr">→</span><span class="k">[Dimmers]</span></div></div></li>
+    <li class="step"><div class="snum">2</div><div class="sbody"><div class="stit">Set DMX line and address</div><div class="sdesc">Softkey shows "DMX Line=" and "Address=". Type new address on keypad, press Enter. To specify line and address together: type e.g. <span style="font-family:var(--font-mono)">2.56</span> for universe 2 address 56.</div></div></li>
+    <li class="step"><div class="snum">3</div><div class="sbody"><div class="stit">Assign to a button or fader</div><div class="sdesc">Touch a fixture button, Macro/Executor button, or fader Select button. Button turns dark blue with fixture details. Multiple dimmers can be patched to one handle — press the same button again for each additional channel.</div></div></li>
+    <li class="step"><div class="snum">4</div><div class="sbody"><div class="stit">Set User Number (optional)</div><div class="sdesc">Softkey "User Number = xx" lets you assign a custom ID number for the fixture. Used when selecting by number from the keypad.</div></div></li>
+  </ul>
+  <p class="h3">Patching moving light fixtures</p>
+  <ul class="steplist">
+    <li class="step"><div class="snum">1</div><div class="sbody"><div class="stit">Open patch, select Fixtures</div><div class="kp"><span class="k">Patch</span><span class="karr">→</span><span class="k">[Fixtures]</span></div></div></li>
+    <li class="step"><div class="snum">2</div><div class="sbody"><div class="stit">Select manufacturer</div><div class="sdesc">Browse by softkeys or use Quick Search — type the first few letters of the manufacturer name. Previous/Next page through the library. The console shows a picture of the fixture when selected (if available in the personality).</div></div></li>
+    <li class="step"><div class="snum">3</div><div class="sbody"><div class="stit">Select fixture type and mode</div><div class="sdesc">Pick the model and then the DMX mode. The mode on the console must match the mode set on the physical fixture. Modes with a Capture icon support Auto Patch in the visualiser.</div></div></li>
+    <li class="step"><div class="snum">4</div><div class="sbody"><div class="stit">Set DMX address and line</div><div class="sdesc">Console shows the first free address. Type a new address if needed. DMX line= softkey changes universe.</div></div></li>
+    <li class="step"><div class="snum">5</div><div class="sbody"><div class="stit">Assign to a button</div><div class="sdesc">Touch fixture buttons. DMX address auto-increments for each subsequent fixture. Repeat step 5 to patch multiples rapidly.</div></div></li>
+  </ul>
+  <p class="h3">Patch options (accessed via [Options] softkey during patching)</p>
+  <div class="row"><span class="badge">Qty</span><span class="rlab">Quantity</span><span class="rdesc">Patch multiple of the same fixture at once. Drag or select a range of buttons — each gets sequential DMX addresses.</span></div>
+  <div class="row"><span class="badge">Off</span><span class="rlab">Offset</span><span class="rdesc">Leaves gaps in DMX channels between fixtures. Useful for future fixture exchange. E.g. Offset=32 allocates 32 channels per fixture even if the fixture only uses 20.</span></div>
+  <div class="row"><span class="badge">PP</span><span class="rlab">Preset Palettes</span><span class="rdesc">Auto-creates default colour, gobo, and position palettes for newly patched fixture. Off by default. Gives a useful programming starting point.</span></div>
+  <div class="row"><span class="badge">AG</span><span class="rlab">AutoGroups</span><span class="rdesc">Auto-creates groups for all fixtures of the same type, and for the quantity you patched. Saves manual group creation time.</span></div>
+  <div class="row"><span class="badge">PD</span><span class="rlab">Pending Dimmer</span><span class="rdesc">For fixtures with a separate dimmer channel (e.g. VL5), patch the dimmer channel onto the same handle as the moving light. Shown with a flash symbol in Patch View.</span></div>
+  <div class="row"><span class="badge">FF</span><span class="rlab">Find Fixture</span><span class="rdesc">Scroll a Locate state through all DMX addresses to find an unknown fixture. Wheel B = address, Wheel A = DMX line, Wheel C jumps by fixture channel count.</span></div>
+  <p class="h3">Sub-fixtures (multi-cell fixtures)</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">Some fixtures (e.g. LED battens) contain multiple cells. Patch as one "super fixture" and each cell becomes a sub-fixture. Access all cells together via the main handle, or individually via Unfold or the Attribute Editor.</div>
+  <div class="kp"><span class="k">Unfold</span><span class="karr">→</span>select fixture<span class="karr">→ cells appear on individual handles</span></div>
+  <div class="kp"><span class="k">Unfold</span><span class="karr">→</span><span class="k">[Exit Unfold]</span><span class="karr">→ back to normal</span></div>
+  <div class="tip"><i class="ti ti-info-circle"></i><span>Sub-fixture keypad syntax: <span style="font-family:var(--font-mono)">.</span> = all sub-fixtures, <span style="font-family:var(--font-mono)">n.m</span> = sub-fixture m of fixture n, <span style="font-family:var(--font-mono)">.m THRO .j</span> = sub-fixtures m through j of all selected. Cell selection is saved inside groups.</span></div>
+  <p class="h3">Other patch methods</p>
+  <div class="row"><span class="badge bl">RDM</span><span class="rlab">RDM auto-patch</span><span class="rdesc">RDM-equipped fixtures on an RDM-enabled Art-Net node can be discovered automatically. Open/View → Patch → RDM tab. Click Full Discover, then Patch to patch all found devices. You can also change mode and address remotely, and use Identify to flash a fixture so you can locate it in the rig. Requires RDM-compatible splitters/buffers — standard splitters block RDM.</span></div>
+  <div class="row"><span class="badge bl">CITP</span><span class="rlab">Active Fixtures / Media Servers</span><span class="rdesc">Media servers supporting CITP can be patched via [Active Fixtures] → [CITP Media Servers]. Retrieves thumbnail images of media clips for display in the Attribute Editor.</span></div>
+  <div class="row"><span class="badge bl">Park</span><span class="rlab">Parked fixtures</span><span class="rdesc">If a DMX address conflict occurs, the console offers to Park the conflicting fixture. Parked fixtures retain all programming but output no DMX. Re-enable by giving a new address in Patch View. Note: Park ≠ Freeze on Avolites — Park means no output, not locked at full.</span></div>
+  <p class="h3">Changing the patch</p>
+  <div class="row"><span class="badge">Repatch</span><span class="rlab">Change address</span><span class="rdesc">Open Patch View, click the fixture row, change the address directly. Or press Patch → [Repatch Fixture] and follow prompts.</span></div>
+  <div class="row"><span class="badge">Exchange</span><span class="rlab">Fixture Exchange</span><span class="rdesc">Swap one fixture type for another while keeping all cues, palettes, timing, and legends intact. The console maps old attributes to new ones. Any unmapped attributes are lost.</span></div>
+  <div class="row"><span class="badge">Copy</span><span class="rlab">Copy a patched fixture</span><span class="rdesc">Copies a fixture including all its cues and palettes to a new button. Or move multiple fixtures in one operation.</span></div>
+  <div class="row"><span class="badge">Align</span><span class="rlab">Align fixtures</span><span class="rdesc">Copy attribute values from one (master) fixture to other selected fixtures. Useful to quickly replicate a configuration from a newly replaced fixture.</span></div>
+</div>
+
+<div id="s5" class="sec">
+  <p class="stitle"><i class="ti ti-hand-finger"></i>Selecting fixtures</p>
+  <p class="sintro">You must select fixtures before you can change their attributes. Titan has many selection methods — from simple touch to complex number-based channel commands.</p>
+  <p class="h3">Basic selection</p>
+  <div class="row"><span class="badge">Touch</span><span class="rlab">Touch fixture button</span><span class="rdesc">Lights pale blue when selected. Deselect by touching again. The status bar at the top shows currently selected fixtures.</span></div>
+  <div class="row"><span class="badge">Drag</span><span class="rlab">Draw selection box</span><span class="rdesc">Slide finger across multiple touch buttons to select a range in one gesture. For physical fader buttons: hold first, then press last.</span></div>
+  <div class="row"><span class="badge">Locate</span><span class="rlab">Locate button</span><span class="rdesc">Puts selected fixtures into a known start position — full white, pan/tilt centred. Does not record to programmer in Record By Channel mode unless you make further changes.</span></div>
+  <p class="h3">Locate options (hold Locate for sub-menu)</p>
+  <div class="row"><span class="badge">Mask</span><span class="rlab">Set Mask to Exclude All</span><span class="rdesc">Then turn on only the attribute buttons you want Locate to change. E.g. locate intensity only, without moving pan/tilt or changing colour.</span></div>
+  <div class="row"><span class="badge">Auto</span><span class="rlab">Auto Reset Mask</span><span class="rdesc">Mask resets to include everything after each Locate press. Toggle to Remember Mask to keep your last mask setting.</span></div>
+  <div class="row"><span class="badge">DC</span><span class="rlab">Don't Clear / Clear Located Attrs</span><span class="rdesc">Default: Don't Clear — Locate changes values already in programmer and they would be recorded. Clear: removes programmer values before applying Locate, so they won't be recorded.</span></div>
+  <div class="tip"><i class="ti ti-bulb"></i><span>Quick tip: Hold Locate + press Position button = locate without moving pan/tilt. Hold Locate + press Options + press Position = locate pan/tilt ONLY.</span></div>
+  <p class="h3">Changing the Locate State</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">Set up the look you want as the default locate state, then store it:</div>
+  <div class="kp"><span class="k">Record</span><span class="karr">→</span><span class="k">Locate</span><span class="karr">→</span><span class="k">[Shared]</span> or <span class="k">[Individual]</span><span class="karr">→</span><span class="k">Record</span></div>
+  <p class="h3">Clear button — removing programmer values</p>
+  <div class="row"><span class="badge">Quick</span><span class="rlab">Quick press</span><span class="rdesc">Clears fixture selection AND all changes in the programmer. The default behaviour.</span></div>
+  <div class="row"><span class="badge">Hold</span><span class="rlab">Hold down Clear</span><span class="rdesc">Shows mask options on softkeys. Choose which attribute groups to clear and which to keep. Press Options to reset mask. Release to apply.</span></div>
+  <div class="tip"><i class="ti ti-bulb"></i><span>Type a number then press Clear to fade HTP values out over that time: e.g. <span style="font-family:var(--font-mono)">5 Clear</span> = fades intensity over 5 seconds. Very useful for subtle show-time changes.</span></div>
+  <p class="h3">Clear options menu (hold Clear → [Clear Options])</p>
+  <table class="tbl">
+    <tr><th>Option</th><th>What it does</th></tr>
+    <tr><td>Auto Reset Mask</td><td>Mask resets to "Clear All" after each Clear press. Toggle to Remember Mask.</td></tr>
+    <tr><td>Leave / Zero Preset Fader Levels</td><td>Whether latched fixtures (fixture button set to Latch key profile) are cleared or left when you press Clear.</td></tr>
+    <tr><td>Freeze Current Values</td><td>Cleared LTP channels stay at their current value. Toggle to Release to Playback Values to return them to what the active playback specifies.</td></tr>
+    <tr><td>Clear / Maintain Cue Times</td><td>Whether cue timing information is removed from the programmer on Clear.</td></tr>
+    <tr><td>Clear / Maintain Rate Settings</td><td>Whether rate settings are cleared from the programmer.</td></tr>
+    <tr><td>Clear Direction</td><td>Whether direction setting is cleared from the programmer.</td></tr>
+    <tr><td>Action Precedence</td><td>Selection With Programmer (default): one press clears both. Selection Then Programmer: first press = clear selection, second = clear programmer. Programmer Then Selection: opposite order.</td></tr>
+    <tr><td>Clear All Fixtures / Selected Only</td><td>Choose to clear all fixtures from programmer, or only currently selected ones.</td></tr>
+    <tr><td>Individual Attributes</td><td>Shows list of individual attributes in programmer — clear just Pan, just Cyan, etc.</td></tr>
+    <tr><td>Clear All Programmers</td><td>Clears all active programmers including Multi-user and Titan Remote programmers.</td></tr>
+  </table>
+  <p class="h3">Channel menu — select by number</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">Press Fixture button (top-left of keypad) or start typing numbers. Select by User Number, Handle Number, or DMX Address.</div>
+  <table class="tbl">
+    <tr><th>Key sequence</th><th>Result</th></tr>
+    <tr><td><span style="font-family:var(--font-mono)">1 Enter</span></td><td>Select fixture 1</td></tr>
+    <tr><td><span style="font-family:var(--font-mono)">1 And 2 And 5 Enter</span></td><td>Select fixtures 1, 2 and 5</td></tr>
+    <tr><td><span style="font-family:var(--font-mono)">1 Through 8 Enter</span></td><td>Select fixtures 1 through 8</td></tr>
+    <tr><td><span style="font-family:var(--font-mono)">1 Through 4 Not 3 Enter</span></td><td>Select 1, 2, and 4 (skip 3)</td></tr>
+    <tr><td><span style="font-family:var(--font-mono)">1 Through 8 @ 5 Enter</span></td><td>Set fixtures 1–8 to 50% intensity</td></tr>
+    <tr><td><span style="font-family:var(--font-mono)">Group 1 And Group 2 Not 5 Enter</span></td><td>All in groups 1&amp;2 except fixture 5</td></tr>
+    <tr><td><span style="font-family:var(--font-mono)">1 Through 4 Locate</span></td><td>Select and locate fixtures 1–4</td></tr>
+  </table>
+  <p class="h3">Pattern selection</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">Select a range then use All (Odd/Even) to apply a pattern. Useful for programming complex multi-fixture effects quickly.</div>
+  <div class="kp">Select fixtures<span class="karr">→</span><span class="k">All</span><span class="karr">→</span><span class="k">[2 in 4]</span> etc.<span class="karr">→</span><span class="k">Fix +1</span>/<span class="k">Fix -1</span> to step</div>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-top:4px">Patterns: Odd, Even, All, 2 in 4, 3 in 4, 1 in x (custom). Direction option sets selection order (useful for symmetrical pairs and fixture overlap). Hold Avo + Fix +1/–1 to jump in blocks.</div>
+  <p class="h3">Select If — fixtures in a playback</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">Select only fixtures that are used in a specific playback, or fixtures at a specific intensity level.</div>
+  <div class="kp"><span class="k">Select If</span><span class="karr">→</span>touch playback button</div>
+  <div class="sdesc" style="font-size:12px;margin-top:4px">Select If @ 5 = select fixtures at 50%. Select If @ Through 5 = 0–50%. Select If @ @ = all fixtures with intensity above 0.</div>
+  <p class="h3">Stepping, HiLight &amp; Remainder Dim</p>
+  <div class="row"><span class="badge">Fix+1</span><span class="rlab">Step through selection</span><span class="rdesc">After selecting a group or range, Fix +1 / Fix –1 (Prev/Next) selects fixtures one at a time in selection order. All button re-selects everything in programmer.</span></div>
+  <div class="row"><span class="badge">Hi</span><span class="rlab">HiLight mode</span><span class="rdesc">Press HiLight to make the currently stepped fixture brighter (overrides its attribute temporarily) while other fixtures dim down to a "lowlight" level. Highlighted attribute changes are NOT stored in programmer. Store custom levels: Record → HiLight → [Store Highlight/Lowlight State].</span></div>
+  <div class="row"><span class="badge">RD</span><span class="rlab">Remainder Dim</span><span class="rdesc">Turns off all unselected fixtures. Zero intensity placed in programmer and recorded into any subsequent cue. Useful for isolating fixtures when removing them from cues.</div>
+    <div class="kp" style="margin-top:4px"><span class="k">Avo</span><span class="karr">+</span><span class="k">All</span></div>
+  </div>
+</div>
+
+<div id="s6" class="sec">
+  <p class="stitle"><i class="ti ti-adjustments"></i>Attributes &amp; programmer</p>
+  <p class="sintro">Once fixtures are selected, you change their look using the attribute select buttons (G) and the three encoder wheels (F). All changes go into the "programmer" — a temporary buffer. Nothing is saved until you Record.</p>
+  <p class="h3">IPCGBES attribute groups</p>
+  <table class="tbl">
+    <tr><th>Letter</th><th>Group</th><th>What it controls</th></tr>
+    <tr><td><span class="pill pill-r">I</span></td><td>Intensity</td><td>Dimmer level, strobe speed, shutter</td></tr>
+    <tr><td><span class="pill pill-r">P</span></td><td>Position</td><td>Pan (left/right), Tilt (up/down), pan/tilt speed</td></tr>
+    <tr><td><span class="pill pill-r">C</span></td><td>Colour</td><td>CMY mixing, RGB mixing, colour wheel, colour temperature</td></tr>
+    <tr><td><span class="pill pill-r">G</span></td><td>Gobo</td><td>Gobo wheel selection, gobo rotation speed and direction</td></tr>
+    <tr><td><span class="pill pill-r">B</span></td><td>Beam</td><td>Iris (beam size), Zoom (beam angle), Focus, Frost, Prism</td></tr>
+    <tr><td><span class="pill pill-r">E</span></td><td>Effect</td><td>Fixture-specific effects — animation wheels, blade shutters, internal patterns</td></tr>
+    <tr><td><span class="pill pill-r">S</span></td><td>Special</td><td>Macro, control, reset, and other fixture-specific special channels</td></tr>
+  </table>
+  <p class="h3">Using the attribute wheels</p>
+  <div class="row"><span class="badge">Press</span><span class="rlab">Select attribute group</span><span class="rdesc">Press the attribute button (I/P/C/G/B/E) to assign those attributes to the 3 wheels. Bottom-right of screen shows the exact parameter on each wheel.</span></div>
+  <div class="row"><span class="badge">Turn</span><span class="rlab">Adjust value</span><span class="rdesc">Turn a wheel to change the attribute. The change is reflected immediately on stage (if lights are patched and connected).</span></div>
+  <div class="row"><span class="badge">Press W</span><span class="rlab">Press wheel button</span><span class="rdesc">Pressing a wheel button (below each wheel) scrolls through sub-attributes in that group. E.g. pressing the Colour wheel button cycles through Cyan, Magenta, Yellow, then back.</span></div>
+  <div class="row"><span class="badge">Attr Ed</span><span class="rlab">Attribute Editor window</span><span class="rdesc">Provides visual control — colour picker, gobo thumbnail grid, position XY pad. Often easier than wheels for complex colour or position work. Double-press Open/View to open.</span></div>
+  <p class="h3">The programmer</p>
+  <div class="row"><span class="badge bl">Blue</span><span class="rlab">In programmer (dark blue)</span><span class="rdesc">Fixtures with programmer values show a darker blue button. These values are outputting to the lights and override any playback values.</span></div>
+  <div class="row"><span class="badge bl">LTP</span><span class="rlab">LTP (Latest Takes Precedence)</span><span class="rdesc">For non-intensity attributes (colour, position, gobo, beam). The most recently set value wins. If you stop a playback that had colour red, the attribute stays red until something else changes it.</span></div>
+  <div class="row"><span class="badge bl">HTP</span><span class="rlab">HTP (Highest Takes Precedence)</span><span class="rdesc">For intensity only. If multiple playbacks control the same dimmer, the highest value wins. A dimmer can never be driven below the highest active playback's value (unless all playbacks are off).</span></div>
+  <div class="row"><span class="badge">Blind</span><span class="rlab">Programmer Blind mode</span><span class="rdesc">Press Blind (or Avo + Blind) to stop programmer output from reaching the stage. Programme in your head using Capture Visualiser without affecting the show.</span></div>
+  <p class="h3">Special attribute functions</p>
+  <div class="row"><span class="badge">Locate</span><span class="rlab">Locate</span><span class="rdesc">Puts selected fixtures into a known default position with white light. Start here when beginning to program any fixture.</span></div>
+  <div class="row"><span class="badge">Flip</span><span class="rlab">Flip</span><span class="rdesc">Moving heads can reach the same beam angle from two different motor positions (pan/tilt). Flip switches between these positions. Solves "dead spots" where a fixture can't reach a position from one motor side.</span></div>
+  <div class="row"><span class="badge">Fan</span><span class="rlab">Fan</span><span class="rdesc">Spreads a value across multiple selected fixtures. E.g. if 5 heads are selected and you fan pan, they spread symmetrically around the current pan value. Hold Fan and use wheel. Fan shapes: linear, V-shape, curve.</span></div>
+  <div class="row"><span class="badge">@</span><span class="rlab">@ key (set level)</span><span class="rdesc">Quickly set intensity to a specific value. Select fixtures, press @, type a number, press Enter. E.g. <span style="font-family:var(--font-mono)">@ 75 Enter</span> = set to 75%. @ @ = set to full. @ 0 = set to zero.</span></div>
+  <div class="row"><span class="badge">Inc</span><span class="rlab">Include</span><span class="rdesc">Loads the contents of a playback (or specific cues from it) back into the programmer for editing. Like "pulling a cue apart" without destroying it.</span></div>
+  <div class="kp" style="margin-top:4px"><span class="k">Include</span><span class="karr">→</span>push up playback fader<span class="karr">→</span><span class="k">[Active Playback]</span> or <span class="k">[Specific Cue]</span></div>
+</div>
+
+<div id="s7" class="sec">
+  <p class="stitle"><i class="ti ti-users-group"></i>Groups &amp; layouts</p>
+  <p class="sintro">Groups are saved fixture selections. Touching a group button selects all its fixtures instantly. Groups also store selection order, which determines how effects (shapes, pixel mapper) spread across fixtures.</p>
+  <p class="h3">Creating and using groups</p>
+  <ul class="steplist">
+    <li class="step"><div class="snum">1</div><div class="sbody"><div class="stit">Select the fixtures you want in the group</div><div class="sdesc">Select them in the order you want effects to spread — first to last defines the "direction" of any shape or chase.</div></div></li>
+    <li class="step"><div class="snum">2</div><div class="sbody"><div class="stit">Record the group</div><div class="kp"><span class="k">Record</span><span class="karr">→</span>touch a group button in Groups window</div></div></li>
+    <li class="step"><div class="snum">3</div><div class="sbody"><div class="stit">Name the group</div><div class="kp"><span class="k">Legend</span><span class="karr">→</span>touch group button<span class="karr">→</span>type name</div></div></li>
+  </ul>
+  <p class="h3">Group features</p>
+  <div class="row"><span class="badge">Order</span><span class="rlab">Selection order</span><span class="rdesc">The order fixtures were selected when the group was recorded matters for effects. Shapes spread in that order, creating wave patterns. Re-record the group in a different order to change wave direction.</span></div>
+  <div class="row"><span class="badge">Cell</span><span class="rlab">Sub-fixture selection saved</span><span class="rdesc">If you selected specific sub-fixtures (cells) of multi-cell fixtures before recording the group, that cell selection is saved inside the group. Touching the group also selects those specific cells.</span></div>
+  <div class="row"><span class="badge">Pattern</span><span class="rlab">Pattern selection from group</span><span class="rdesc">Hold down a group button to access pattern select options (Odd, Even, 1 in x) directly, without opening the All menu.</span></div>
+  <div class="row"><span class="badge">Auto</span><span class="rlab">AutoGroups (from Patch)</span><span class="rdesc">When patching with AutoGroups enabled, Titan auto-creates one group for all fixtures of the same type and one for the quantity patched. Check Groups window after patching.</span></div>
+  <p class="h3">Layout windows</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">Layout windows show a 2D plan view of your fixtures in their physical rig positions. You can select fixtures by touching their position on the plan — very intuitive for position-based programming.</div>
+  <div class="kp"><span class="k">Open/View</span><span class="karr">→</span><span class="k">[Layouts]</span><span class="karr">→</span>arrange fixture icons to match physical positions</div>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-top:4px">Layouts are also used by the Pixel Mapper to determine which fixture corresponds to which pixel position on the animation grid.</div>
+</div>
+
+<div id="s8" class="sec">
+  <p class="stitle"><i class="ti ti-palette"></i>Palettes</p>
+  <p class="sintro">Palettes are stored attribute values you can recall instantly. They are the single biggest workflow speed-up on any Avolites console. Well-named palettes make live busking dramatically faster.</p>
+  <p class="h3">Palette types</p>
+  <table class="tbl">
+    <tr><th>Type</th><th>Stores</th><th>Notes</th></tr>
+    <tr><td>Colour</td><td>CMY / RGB / colour wheel values</td><td>Most commonly used. Store a red, blue, amber, UV, etc.</td></tr>
+    <tr><td>Position</td><td>Pan and tilt values</td><td>Pre-focus each fixture on key stage positions. Update during sound check.</td></tr>
+    <tr><td>Gobo</td><td>Gobo wheel + rotation</td><td>Store specific gobos and rotation speeds.</td></tr>
+    <tr><td>Beam</td><td>Iris, zoom, focus, frost</td><td>Store beam presets — tight spot, wide wash, half-frost.</td></tr>
+    <tr><td>Timing</td><td>Fade in/out times</td><td>Apply consistent timing across cues quickly.</td></tr>
+    <tr><td>Global</td><td>Works on all fixture types</td><td>Titan maps values to equivalent attributes on different fixture types.</td></tr>
+    <tr><td>Shared</td><td>Same value for all fixtures</td><td>All selected fixtures get identical values — e.g. all heads to pan=128.</td></tr>
+    <tr><td>Local</td><td>Per-fixture values</td><td>Each fixture has its own stored value — e.g. position palette where each head focuses a different point.</td></tr>
+  </table>
+  <p class="h3">Recording a palette</p>
+  <ul class="steplist">
+    <li class="step"><div class="snum">1</div><div class="sbody"><div class="stit">Select fixtures and set the attribute</div><div class="sdesc">Only the attribute group you changed will be stored by default (e.g. if you changed Colour, only colour is stored in the palette — not position or gobo).</div></div></li>
+    <li class="step"><div class="snum">2</div><div class="sbody"><div class="stit">Record to a palette button</div><div class="kp"><span class="k">Record</span><span class="karr">→</span>touch palette button in Palettes window</div></div></li>
+    <li class="step"><div class="snum">3</div><div class="sbody"><div class="stit">Name it</div><div class="kp"><span class="k">Legend</span><span class="karr">→</span>touch palette<span class="karr">→</span>type name</div><div class="sdesc" style="margin-top:3px">You can also add a picture legend — draw an icon on the touchscreen to make it visually distinctive.</div></div></li>
+  </ul>
+  <p class="h3">Using a palette</p>
+  <div class="kp">Select fixtures<span class="karr">→</span>touch palette button</div>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-top:4px">The change goes into the programmer. It is NOT saved until you Record a cue. You can also apply a palette to all fixtures without selecting them first — this is called a Quick Palette (always goes to all fixtures of the matching type).</div>
+  <p class="h3">Updating a palette</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">Updating a palette automatically updates every cue that references that palette — you don't have to re-record each cue individually.</div>
+  <div class="kp">Select fixtures<span class="karr">→</span>make changes<span class="karr">→</span><span class="k">Update</span><span class="karr">→</span>touch palette button</div>
+  <div class="sdesc" style="font-size:12px;margin-top:4px">Or: make changes, then Record → palette button → choose [Merge] to update, or [Replace] to overwrite completely.</div>
+  <p class="h3">Palette timing</p>
+  <div class="row"><span class="badge">Quick</span><span class="rlab">Quick palette</span><span class="rdesc">Default — applies instantly with no fade. Fixtures jump to new value immediately.</span></div>
+  <div class="row"><span class="badge">Timed</span><span class="rlab">Timed palette</span><span class="rdesc">Set a fade time for the palette. When applied, fixtures fade over that time rather than snapping.</span></div>
+  <div class="row"><span class="badge">Master</span><span class="rlab">Master palette time</span><span class="rdesc">Set a global fade time for all palette recalls. Held in User Settings → Palettes.</span></div>
+  <div class="row"><span class="badge">Per-fix</span><span class="rlab">Per-fixture timing</span><span class="rdesc">Different fixtures in the same palette can have different fade times — e.g. position takes 3s but colour takes 0.5s.</span></div>
+  <p class="h3">Importing palettes between shows</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">Use the Show Library to import palettes from another show file. Titan maps them to matching fixtures in your current show.</div>
+  <div class="kp"><span class="k">Open/View</span><span class="karr">→</span><span class="k">[Show Library]</span><span class="karr">→</span>select source show<span class="karr">→</span>import palettes</div>
+</div>
+
+<div id="s9" class="sec">
+  <p class="stitle"><i class="ti ti-player-play"></i>Cues</p>
+  <p class="sintro">A cue is a stored snapshot of lighting values. Push a fader up and the look fades in. Four types of playback exist: Cue (single look), Chase (auto-looping sequence), Cue List (go-button sequence), Timeline (timecoded sequence). All are stored on "handles" — faders, touch buttons, or executor buttons.</p>
+  <p class="h3">Where to store playbacks (handles)</p>
+  <div class="row"><span class="badge">Fader</span><span class="rlab">Playback fader</span><span class="rdesc">Push up to fade in intensity. HTP controls intensity output. Fader can also control other things via Options (master speed, size, etc.).</span></div>
+  <div class="row"><span class="badge">Virtual</span><span class="rlab">Virtual fader</span><span class="rdesc">On-screen fader in the Virtual Faders window — works exactly like a physical fader. No hardware needed. Ideal for touch-screen-only shows.</span></div>
+  <div class="row"><span class="badge">Touch</span><span class="rlab">Touch button (Playbacks window)</span><span class="rdesc">Toggles or flashes the playback. Behaviour set by Key Profiles (latch, flash, timed flash, swop).</span></div>
+  <div class="row"><span class="badge">Exec</span><span class="rlab">Macro/Executor button</span><span class="rdesc">Physical programmable button. Key Profiles set behaviour. Good for frequently-triggered effects or instant looks.</span></div>
+  <p class="h3">Recording a cue — step by step</p>
+  <ul class="steplist">
+    <li class="step"><div class="snum">1</div><div class="sbody"><div class="stit">Build your look in the programmer</div><div class="sdesc">Select fixtures, set attributes. Programmer shows values in dark blue on fixture buttons. Everything you've changed since the last Clear is "in the programmer".</div></div></li>
+    <li class="step"><div class="snum">2</div><div class="sbody"><div class="stit">Press Record</div><div class="kp"><span class="k">Record</span></div></div></li>
+    <li class="step"><div class="snum">3</div><div class="sbody"><div class="stit">Touch a playback handle</div><div class="sdesc">Touch the button above/below a fader, a Virtual Fader, a touch button in Playbacks window, or an Executor button. The cue is stored immediately.</div></div></li>
+    <li class="step"><div class="snum">4</div><div class="sbody"><div class="stit">Choose record mode (if prompted)</div><div class="sdesc">By Fixture: all attributes of selected fixtures. By Channel: only attributes you actually changed. Record Stage: everything currently live. Quick Build: build from palettes/cues.</div></div></li>
+    <li class="step"><div class="snum">5</div><div class="sbody"><div class="stit">Name it</div><div class="kp"><span class="k">Legend</span><span class="karr">→</span>touch playback button<span class="karr">→</span>type name</div></div></li>
+  </ul>
+  <p class="h3">Cue timing</p>
+  <table class="tbl">
+    <tr><th>Timing field</th><th>What it does</th></tr>
+    <tr><td>Fade In</td><td>Time for attributes to reach their target when fader is raised</td></tr>
+    <tr><td>Fade Out</td><td>Time to fade when fader is lowered or playback released</td></tr>
+    <tr><td>Delay In</td><td>Wait this long before starting to fade in</td></tr>
+    <tr><td>Delay Out</td><td>Wait this long before starting to fade out</td></tr>
+    <tr><td>Fixture Overlap</td><td>0–100%. 100% = all fixtures fade at once. 50% = each fixture starts its fade as the previous reaches 50%. Creates a ripple/cascade effect through the fixture selection order.</td></tr>
+    <tr><td>Attribute-specific timing</td><td>Per-attribute fade and delay. E.g. Position fades in 3s, Colour in 0.5s — all within the same cue.</td></tr>
+  </table>
+  <div class="kp"><span class="k">Time</span><span class="karr">→</span>touch playback<span class="karr">or</span><span class="k">Avo</span><span class="karr">+</span>fader handle<span class="karr">→</span><span class="k">[Edit Times]</span></div>
+  <p class="h3">Editing cues</p>
+  <div class="row"><span class="badge">Include</span><span class="rlab">Include into programmer</span><span class="rdesc">Pull the cue values back into the programmer for editing. Record back with [Merge] when done.</span></div>
+  <div class="row"><span class="badge">Unfold</span><span class="rlab">Unfold cue</span><span class="rdesc">Opens a single cue to show its full attribute contents for editing. Press Unfold → playback.</span></div>
+  <div class="row"><span class="badge">Record→Merge</span><span class="rlab">Merge changes</span><span class="rdesc">After Include + edits: Record → playback → [Merge] to update the cue without destroying other values.</span></div>
+  <div class="row"><span class="badge">Channel Grid</span><span class="rlab">Channel Grid editing</span><span class="rdesc">Open Channel Grid window to directly view and edit all fixture attribute values in a cue. Touch a cell to change its value.</span></div>
+  <p class="h3">Playback options (Avo + fader handle)</p>
+  <table class="tbl">
+    <tr><th>Option</th><th>What it does</th></tr>
+    <tr><td>Fader controls Intensity / LTP / Shape Size / Speed</td><td>Changes what the fader level controls when pushed up</td></tr>
+    <tr><td>Flash fade in / Flash fade out</td><td>Fade time when flash button is pressed</td></tr>
+    <tr><td>Priority</td><td>Low / Normal / High / Programmer. Higher priority overrides lower in LTP conflicts.</td></tr>
+    <tr><td>Blind</td><td>Puts individual playback into blind mode — runs in visualiser only, not on stage</td></tr>
+    <tr><td>Key Profile</td><td>Set per-playback key profile (latch, flash, swop, timed flash)</td></tr>
+    <tr><td>Run on Startup</td><td>Automatically activate this playback when console powers on</td></tr>
+    <tr><td>Release Mask</td><td>Which attributes are released (returned to default) when playback is released</td></tr>
+    <tr><td>Shape Behaviour</td><td>How shapes scale with the fader level</td></tr>
+    <tr><td>Loop (for cues)</td><td>Chase or Cue List loops back to start automatically</td></tr>
+  </table>
+  <p class="h3">Copying, moving, linking, and deleting</p>
+  <div class="row"><span class="badge">Copy</span><span class="rlab">Copy a playback</span><span class="rdesc">Creates an independent duplicate. Editing the copy does not affect the original.</span></div>
+  <div class="row"><span class="badge">Move</span><span class="rlab">Move a playback</span><span class="rdesc">Moves the playback to a new handle. All links and references update. Use to tidy the layout.</span></div>
+  <div class="row"><span class="badge">Link</span><span class="rlab">Link playbacks</span><span class="rdesc">Creates a soft link — the linked copy plays the same cue data as the original. Editing either one edits both.</span></div>
+  <div class="row"><span class="badge">Delete</span><span class="rlab">Delete</span><span class="rdesc">Removes the playback. Press Delete → touch playback handle → confirm. Cannot be undone (use Undo if immediately after).</span></div>
+</div>
+
+<div id="s10" class="sec">
+  <p class="stitle"><i class="ti ti-refresh"></i>Chases</p>
+  <p class="sintro">A chase is a sequence of cues that plays automatically in a loop. Each step can be a complete lighting state. Chases are ideal for repeating effects — colour chases, position sweeps, strobe patterns, crowd blinders.</p>
+  <p class="h3">Recording a chase</p>
+  <ul class="steplist">
+    <li class="step"><div class="snum">1</div><div class="sbody"><div class="stit">Build step 1 and record</div><div class="kp"><span class="k">Record</span><span class="karr">→</span>touch a playback fader</div></div></li>
+    <li class="step"><div class="snum">2</div><div class="sbody"><div class="stit">Clear, build step 2, record again</div><div class="kp"><span class="k">Clear</span><span class="karr">→</span>build look<span class="karr">→</span><span class="k">Record</span><span class="karr">→</span>touch SAME fader</div><div class="sdesc" style="margin-top:3px">Titan asks "Record as Chase?" — confirm. Each subsequent record appends a new step.</div></div></li>
+    <li class="step"><div class="snum">3</div><div class="sbody"><div class="stit">Repeat for all steps</div><div class="sdesc">Add as many steps as needed. Each step gets a step number. No limit on the number of steps.</div></div></li>
+  </ul>
+  <p class="h3">Chase timing controls</p>
+  <table class="tbl">
+    <tr><th>Parameter</th><th>What it controls</th></tr>
+    <tr><td>Speed (BPM)</td><td>How fast the chase runs. Set with wheels or tap Tap Tempo button to sync to music BPM.</td></tr>
+    <tr><td>Crossfade</td><td>0 = snap between steps (no fade). 100 = full smooth crossfade between every step.</td></tr>
+    <tr><td>Direction</td><td>Forward, Backward, Bounce (forward then backward), Random (random step order)</td></tr>
+    <tr><td>Step / Beat</td><td>How many beats of the tempo correspond to one step advance. E.g. "2 beats per step" = slower.</td></tr>
+    <tr><td>Link</td><td>Steps auto-advance based on time (linked) or wait for Go button press (unlinked).</td></tr>
+    <tr><td>Override</td><td>Individual step timing overrides the global chase speed for that specific step.</td></tr>
+    <tr><td>Size (fader)</td><td>If set in options, the fader level controls the effect size instead of intensity.</td></tr>
+  </table>
+  <p class="h3">Chase control buttons (section H on console)</p>
+  <div class="row"><span class="badge">Go</span><span class="rlab">Go / step forward</span><span class="rdesc">When linked, advances one step. When unlinked with all steps linked, runs the chase.</span></div>
+  <div class="row"><span class="badge">Stop</span><span class="rlab">Stop / pause</span><span class="rdesc">Pauses the chase at the current step. Press Go to resume.</span></div>
+  <div class="row"><span class="badge">Back</span><span class="rlab">Step back</span><span class="rdesc">Moves to the previous step.</span></div>
+  <div class="row"><span class="badge">Conn</span><span class="rlab">Connect</span><span class="rdesc">Connects the Go/Stop/Back buttons to a specific chase/cue list. Press Connect then touch the playback handle to connect to it.</span></div>
+  <p class="h3">Editing a chase</p>
+  <div class="kp"><span class="k">Avo</span><span class="karr">+</span>fader handle<span class="karr">→</span><span class="k">[Edit Times]</span> or <span class="k">[View Steps]</span></div>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-top:4px">Open Chase View window to see all steps. Include specific steps into the programmer to edit them, then Record → Merge back in.</div>
+  <p class="h3">Tap Tempo &amp; audio sync</p>
+  <div class="row"><span class="badge">Tap</span><span class="rlab">Tap Tempo</span><span class="rdesc">With a chase running, repeatedly tap a button set to Tap Tempo to lock the speed to the music BPM. The more taps you give it, the more accurate the average BPM becomes.</span></div>
+  <div class="row"><span class="badge">Audio</span><span class="rlab">Audio triggering</span><span class="rdesc">Connect audio to the line-in port on the rear. In System menu, configure Audio Triggers. Chase speed can lock to the detected BPM of the music. Multi-band triggering available (Titan v9+).</span></div>
+  <div class="row"><span class="badge">Pioneer</span><span class="rlab">Pioneer DJ link</span><span class="rdesc">Link to a Pioneer DJ system via the DJ Sync option. The console receives BPM and beat grid data directly from the DJ equipment for accurate, beat-locked effects.</span></div>
+</div>
+
+<div id="s11" class="sec">
+  <p class="stitle"><i class="ti ti-list-numbers"></i>Cue lists</p>
+  <p class="sintro">A cue list is a numbered sequence of individual cues. You step through them by pressing Go. Unlike chases, cue lists don't auto-loop — you control every advance. Used in theatre, broadcast, and complex live productions where each scene is precisely programmed.</p>
+  <p class="h3">Creating a cue list</p>
+  <ul class="steplist">
+    <li class="step"><div class="snum">1</div><div class="sbody"><div class="stit">Record first cue to a fader</div><div class="kp"><span class="k">Record</span><span class="karr">→</span>touch fader<span class="karr">→</span><span class="k">[Create Cue List]</span></div></div></li>
+    <li class="step"><div class="snum">2</div><div class="sbody"><div class="stit">Build and record each cue</div><div class="sdesc">Set your look, then Record → same fader. Cues are numbered 1, 2, 3... You can insert fractional cues (e.g. 2.5) between existing ones later.</div></div></li>
+    <li class="step"><div class="snum">3</div><div class="sbody"><div class="stit">Advance with Go</div><div class="sdesc">Press Go button (section H) to step to the next cue. Screen shows current and next cue name, timing, and tracking state.</div></div></li>
+  </ul>
+  <p class="h3">Tracking (LTP persistence)</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:8px">In tracking mode (default), attributes "track" from cue to cue. If you set lights red in cue 1 and don't change colour in cue 2, the lights remain red in cue 2. Only changed attributes are stored per cue — making file sizes smaller and edits faster. Tracking state is shown in Cue List View (T = tracking, B = block).</div>
+  <div class="row"><span class="badge">Track</span><span class="rlab">Tracking on (default)</span><span class="rdesc">Values persist from previous cue unless explicitly changed. One edit to cue 1 may ripple forward through many cues.</span></div>
+  <div class="row"><span class="badge">Block</span><span class="rlab">Block tracking</span><span class="rdesc">A "Block" cue stops tracking — it records all attribute values explicitly. Nothing tracks through it from earlier cues.</span></div>
+  <p class="h3">Advanced cue list features</p>
+  <table class="tbl">
+    <tr><th>Feature</th><th>What it does</th></tr>
+    <tr><td>Move In Dark (MiD)</td><td>Automatically moves a fixture (pan/tilt, gobo, etc.) to its next position while its intensity is zero — you never see the movement. Console calculates when intensity was last zero and moves then.</td></tr>
+    <tr><td>Autoload</td><td>Automatically trigger another playback or cue list when a specific cue fires. Set in Cue List View → Autoload column.</td></tr>
+    <tr><td>Macro trigger</td><td>Fire a button macro from a specific cue. Set in Macro column of Cue List View.</td></tr>
+    <tr><td>Link / Loop</td><td>Link a cue so it auto-advances after its fade time completes. Loop: cue list loops back to cue 1 after the last cue.</td></tr>
+    <tr><td>Manual crossfade</td><td>Use the fader itself to manually fade between the current and next cue — not time-based. Full control of the transition speed.</td></tr>
+    <tr><td>Timecode lock (MIDI/LTC)</td><td>Lock the cue list to an incoming MIDI or LTC timecode source. Each cue fires at its programmed timecode value. Up to 4 simultaneous timecode sources. Timecode offset shifts the whole show.</td></tr>
+    <tr><td>Record Mode</td><td>Set whether the cue list records by fixture, by channel, or records stage. Affects tracking behaviour.</td></tr>
+    <tr><td>Unfold</td><td>Open a cue list fader to show all its cues as individual playbacks for direct access and editing.</td></tr>
+    <tr><td>Insert cue</td><td>Add a new cue between two existing ones. Fractional numbering (e.g. 2.5 between cues 2 and 3).</td></tr>
+    <tr><td>Delete cue</td><td>Remove a specific cue. Tracked values still flow through unless blocked.</td></tr>
+  </table>
+  <p class="h3">Live editing during a show</p>
+  <div class="row"><span class="badge">Include</span><span class="rlab">Edit a cue live</span><span class="rdesc">Include a cue into programmer while show is running. Make changes, then Record → cue → Merge. The change takes effect immediately or on next cue retrieval.</span></div>
+  <div class="row"><span class="badge">Unfold</span><span class="rlab">Unfold for editing</span><span class="rdesc">Unfolds cue list to individual faders. Push up a fader to jump directly to that cue during editing.</span></div>
+</div>
+
+<div id="s12" class="sec">
+  <p class="stitle"><i class="ti ti-timeline"></i>Timelines (Titan v15+)</p>
+  <p class="sintro">Timelines let you record a fully timed show with triggers mapped to a timecode track. They are different from cue lists — instead of pressing Go for each cue, everything fires automatically at specific timecode positions. Used for shows synced to music or film.</p>
+  <p class="h3">Trigger types</p>
+  <table class="tbl">
+    <tr><th>Trigger type</th><th>What it does</th></tr>
+    <tr><td>Set Level</td><td>Sets a playback or attribute to a specific level at a timecode point</td></tr>
+    <tr><td>Go</td><td>Fires a Go command to a cue list at a timecode point</td></tr>
+    <tr><td>Flash</td><td>Flashes a playback on at that timecode point</td></tr>
+    <tr><td>Timed Flash</td><td>Flashes a playback for a specified duration</td></tr>
+    <tr><td>Swop</td><td>Swops a playback on (all others in the group off) at that point</td></tr>
+    <tr><td>Preload</td><td>Pre-loads a cue list to the programmed cue number without outputting — ready to fire</td></tr>
+    <tr><td>Wait for Go</td><td>Pauses the timeline and waits for a manual Go button press before continuing</td></tr>
+  </table>
+  <p class="h3">Building a timeline</p>
+  <ul class="steplist">
+    <li class="step"><div class="snum">1</div><div class="sbody"><div class="stit">Open the Timelines workspace</div><div class="kp"><span class="k">Open/View</span><span class="karr">→</span><span class="k">[Timelines]</span></div></div></li>
+    <li class="step"><div class="snum">2</div><div class="sbody"><div class="stit">Create a new timeline</div><div class="sdesc">Record → touch a fader handle → [Create Timeline]. The timeline editor opens with a track view.</div></div></li>
+    <li class="step"><div class="snum">3</div><div class="sbody"><div class="stit">Add triggers</div><div class="sdesc">Touch and hold at a timecode position in the timeline, then choose a trigger type. Or use Live Record to capture playback actions in real time as the timecode runs.</div></div></li>
+    <li class="step"><div class="snum">4</div><div class="sbody"><div class="stit">Use Smooth to convert snaps to fades</div><div class="sdesc">Select a "Set Level" trigger and press [Smooth] to convert a level snap to a linear fade between two positions. Creates smooth fader movements at precise timecode frames.</div></div></li>
+  </ul>
+  <p class="h3">Timeline features</p>
+  <div class="row"><span class="badge">Offset</span><span class="rlab">Timecode Offset</span><span class="rdesc">Shift the entire timeline or individual sections forward/backward in time. Fine-tune at the frame level without re-programming every trigger. Useful when the timecode source shifts.</span></div>
+  <div class="row"><span class="badge">Markers</span><span class="rlab">Markers</span><span class="rdesc">Named positions in the timeline (e.g. "Verse 1", "Chorus"). Click to jump to that position. Shown in the overview bar at the top of the timeline.</span></div>
+  <div class="row"><span class="badge">Overview</span><span class="rlab">Overview bar</span><span class="rdesc">Shows the entire show on a condensed scale at the top of the timeline window. Drag to navigate. Useful for finding sections in a long show quickly.</span></div>
+  <div class="row"><span class="badge">Live Rec</span><span class="rlab">Live recording</span><span class="rdesc">Run the timecode source, then operate the console normally. All playback actions (fader moves, button presses) are recorded as triggers in the timeline in real time. You can do multiple passes and merge them.</span></div>
+  <div class="row"><span class="badge">4 src</span><span class="rlab">Up to 4 timecode sources</span><span class="rdesc">MIDI, SMPTE/LTC, Internal clock, and Audio tap tempo can all run simultaneously as timecode sources. Each timeline can be assigned to its own source.</span></div>
+  <div class="warn"><i class="ti ti-alert-triangle"></i><span>Timelines are available from Titan v15 onwards. If you open an older show file from pre-v15, any Timelines will not be present.</span></div>
+</div>
+
+<div id="s13" class="sec">
+  <p class="stitle"><i class="ti ti-sparkles"></i>Effects</p>
+  <p class="sintro">Titan's effects engine creates automatic movement, colour cycling, strobing, and animated patterns. Three systems: Shape Generator (preset), Key Frame Shapes (custom), and Pixel Mapper (grid animations).</p>
+  <p class="h3">Shape Generator</p>
+  <ul class="steplist">
+    <li class="step"><div class="snum">1</div><div class="sbody"><div class="stit">Select fixtures and attribute group</div><div class="sdesc">Select fixtures, then press the attribute button for the type of shape (e.g. Position for pan/tilt movement, Colour for colour cycle).</div></div></li>
+    <li class="step"><div class="snum">2</div><div class="sbody"><div class="stit">Open Shape Generator</div><div class="kp"><span class="k">Shapes</span><span class="karr">→</span><span class="k">[Generate Shape]</span></div></div></li>
+    <li class="step"><div class="snum">3</div><div class="sbody"><div class="stit">Pick a shape type</div><div class="sdesc">Circle, sine wave, square wave, triangle, random, saw, ramp. Shape immediately runs on selected fixtures.</div></div></li>
+    <li class="step"><div class="snum">4</div><div class="sbody"><div class="stit">Adjust with wheels</div><div class="sdesc">Wheel A = Speed (BPM). Wheel B = Size (amplitude of movement/colour change). Wheel C = Spread/Phase (offset between fixtures, creating a wave effect through the rig).</div></div></li>
+    <li class="step"><div class="snum">5</div><div class="sbody"><div class="stit">Set direction and phase offset</div><div class="sdesc">Direction reverses the shape (e.g. sine runs backwards). Phase spread staggers when each fixture starts its cycle — creates the "ripple" or "wave" effect across the rig.</div></div></li>
+    <li class="step"><div class="snum">6</div><div class="sbody"><div class="stit">Record to a playback</div><div class="kp"><span class="k">Record</span><span class="karr">→</span>touch fader<span class="karr">→</span>fader controls effect size or speed (set in Options)</div></div></li>
+  </ul>
+  <p class="h3">Shape editing options</p>
+  <div class="row"><span class="badge">Run</span><span class="rlab">Shape runs in playback</span><span class="rdesc">Shape is stored in the cue and runs whenever the playback fader is above zero. Fader can control speed or size depending on options.</span></div>
+  <div class="row"><span class="badge">Override</span><span class="rlab">Per-attribute override</span><span class="rdesc">You can override the speed or size of a specific attribute's shape in a palette or cue without affecting other shapes running on the fixture.</span></div>
+  <div class="row"><span class="badge">Layer</span><span class="rlab">Multiple shapes</span><span class="rdesc">You can run multiple shapes simultaneously on the same fixture — e.g. circle in pan/tilt AND a colour sine wave at the same time. They layer and combine.</span></div>
+  <p class="h3">Key Frame Shape Generator</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:8px">Create a completely custom pattern by recording key frames at specific attribute positions. The console interpolates between them to create smooth movement or colour transitions along your defined path.</div>
+  <div class="kp"><span class="k">Shapes</span><span class="karr">→</span><span class="k">[Key Frame Shape]</span><span class="karr">→</span>set position → <span class="k">[Add Frame]</span><span class="karr">→</span>repeat for each key position</div>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-top:4px">Key frame shapes can be saved to palettes or directly to playbacks. You can edit individual frames by selecting them and adjusting the attribute values.</div>
+  <p class="h3">Pixel Mapper</p>
+  <ul class="steplist">
+    <li class="step"><div class="snum">1</div><div class="sbody"><div class="stit">Create fixture layout grid</div><div class="kp"><span class="k">Groups window</span><span class="karr">→</span><span class="k">[Pixel Mapper]</span><span class="karr">→</span><span class="k">[Edit Group Layout]</span></div><div class="sdesc" style="margin-top:3px">Define a 2D grid matching your physical rig layout. You can also import a Layout window as the grid.</div></div></li>
+    <li class="step"><div class="snum">2</div><div class="sbody"><div class="stit">Assign fixtures to grid cells</div><div class="sdesc">Drag fixture icons onto the grid cells to map each fixture to its physical position. This tells Titan how your rig is laid out in 2D space.</div></div></li>
+    <li class="step"><div class="snum">3</div><div class="sbody"><div class="stit">Add animation layers</div><div class="sdesc">Add one or more animation layers on top of the grid. Layer types: Linear (sweep), Circle (radial), Spiral, Zoom (pulsing), Random, Glitter, or a custom image/video feed (with Synergy).</div></div></li>
+    <li class="step"><div class="snum">4</div><div class="sbody"><div class="stit">Set layer properties</div><div class="sdesc">Each layer has: Colour (or colour gradient), Speed, Direction, Opacity. Layers stack — a transparent top layer reveals the layer below. Background opacity sets the base intensity.</div></div></li>
+    <li class="step"><div class="snum">5</div><div class="sbody"><div class="stit">Record to playback</div><div class="sdesc">Save as a cue. The fader controls effect intensity. Open Pixel Mapper Preview window to see live output.</div></div></li>
+  </ul>
+  <div class="warn"><i class="ti ti-alert-triangle"></i><span>Known quirk: Pixel map effects may show a slight timing delay on fade-in when first triggered. This is a known Titan behaviour — a short pre-load time occurs before the animation begins outputting.</span></div>
+</div>
+
+<div id="s14" class="sec">
+  <p class="stitle"><i class="ti ti-box"></i>Capture visualiser</p>
+  <p class="sintro">Capture is a 3D virtual stage built into Titan from v10. It lets you see your lighting output on a virtual rig without needing the physical lights. Essential for programming at home, in a hotel room, or on stage before the rig is ready.</p>
+  <p class="h3">Opening Capture</p>
+  <div class="kp">Double-press <span class="k">Open/View</span><span class="karr">→</span><span class="k">[Capture Visualiser]</span></div>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-top:4px">Or press the dedicated Visualiser button if your console has one. Capture opens as a workspace window. It can be shown alongside other windows or full-screen.</div>
+  <p class="h3">Auto Patch</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">When you open Capture after patching, fixtures appear automatically in handle-number order. Fixture modes that support Auto Patch show a Capture icon during patching. Modes without the icon won't appear in Capture auto-layout.</div>
+  <div class="row"><span class="badge">Pos</span><span class="rlab">Repositioning fixtures</span><span class="rdesc">Use Capture's own controls to drag and position fixtures in 3D space to match your physical rig. This improves how effects look in the visualiser.</span></div>
+  <div class="row"><span class="badge">Off</span><span class="rlab">Turn off Auto Patch</span><span class="rdesc">Open Capture Visualiser Settings → Stage tab → disable Auto Patch if you want to control fixture placement manually.</span></div>
+  <p class="h3">Full Capture integration (Nexum or above)</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">The console can link to a full external Capture installation running on a separate PC. Changes on the console sync to the external Capture show, and vice versa — changes in Capture sync back to the console patch.</div>
+  <p class="h3">Using Capture during programming</p>
+  <div class="row"><span class="badge">Blind</span><span class="rlab">Blind mode + Capture</span><span class="rdesc">Enable Blind mode to programme entirely through the visualiser without affecting stage output. Perfect for pre-programming during a show.</span></div>
+  <div class="row"><span class="badge">Legacy</span><span class="rlab">Legacy wireframe visualiser</span><span class="rdesc">The original Titan wireframe visualiser is still available via [Legacy Visualiser] option. Capture replaced it from v10 but both can be used.</span></div>
+</div>
+
+<div id="s15" class="sec">
+  <p class="stitle"><i class="ti ti-run"></i>Running the show</p>
+  <p class="sintro">Everything about live operation — faders, masters, pages, blind mode, locking, venue mode, move function, set lists, external triggers, and PioneerDJ.</p>
+  <p class="h3">Playback controls</p>
+  <div class="row"><span class="badge">HTP</span><span class="rlab">Intensity faders (HTP)</span><span class="rdesc">Multiple faders controlling the same fixture's intensity — the highest value wins. Push fader up to fade in a look. Lower it to fade out.</span></div>
+  <div class="row"><span class="badge">Flash</span><span class="rlab">Flash buttons</span><span class="rdesc">The button above (and below) each fader flashes the cue at full while held. Release = returns to previous state. Key Profiles can change this to latch, toggle, swop, or timed flash.</span></div>
+  <div class="row"><span class="badge">Pages</span><span class="rlab">Playback pages</span><span class="rdesc">Each page holds 10 fader slots. Use Page buttons to switch pages. Running playbacks persist through page changes — you don't lose them when you page-flip.</span></div>
+  <div class="row"><span class="badge">GM</span><span class="rlab">Grand Master</span><span class="rdesc">Controls overall output intensity across all playbacks. If nothing seems to be working, check Grand Master is at 100%. The Avo button + Grand Master opens master options.</span></div>
+  <div class="row"><span class="badge">Scene</span><span class="rlab">Scene Master</span><span class="rdesc">A special master fader that allows you to preview a look (even from multiple palettes) in blind then fade it in to the stage with a single fader move. More powerful than Blind for busking transitions.</span></div>
+  <div class="row"><span class="badge">PBG</span><span class="rlab">Playback Groups</span><span class="rdesc">Group multiple playbacks so only one can be active at a time (radio button behaviour). Useful for mutually exclusive looks (e.g. only one colour state active at once).</span></div>
+  <p class="h3">Blind mode</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">Enter Blind mode to programme without affecting the stage. Active playbacks continue running on stage — the programmer just stops outputting.</div>
+  <div class="kp"><span class="k">Blind</span> (or <span class="k">Avo</span><span class="karr">+</span>select <span class="k">[Blind]</span>)</div>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-top:4px">Blind button lit = blind mode active. Status bar shows BLIND MODE. To fade blind output to live with a timed transition: type a number (seconds) then press Blind again.</div>
+  <p class="h3">Locking the console</p>
+  <div class="kp"><span class="k">Avo</span><span class="karr">→</span><span class="k">Lock</span><span class="karr">→</span>type password<span class="karr">→</span><span class="k">Lock</span></div>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-top:4px;margin-bottom:6px">All controls disabled except DMX outputs and running playbacks. To unlock: enter same password again. Emergency unlock code: 68340. Set a Saved Programmer Password to skip typing each time: Avo → Lock → Lock → [Set Saved Password]. Lock does NOT encrypt the show file — it's an operational lock only.</div>
+  <div class="row"><span class="badge">BG</span><span class="rlab">Lock screen background</span><span class="rdesc">Set a custom image for the lock screen in User Settings → Lock tab. Scaling options: None, Letterbox, Fill, Stretch. For Quartz, optimal background image size is 1280×800 px.</span></div>
+  <p class="h3">Venue Mode</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">Venue Mode shows a restricted workspace on the lock screen — giving non-technical staff basic playback access without full programming access. E.g. venue manager can turn on/off a preset look.</div>
+  <ul class="steplist">
+    <li class="step"><div class="snum">1</div><div class="sbody"><div class="stit">Save a Venue Mode workspace</div><div class="sdesc">Create a workspace with only the controls you want accessible (e.g. Playbacks window with a few basic cues).</div></div></li>
+    <li class="step"><div class="snum">2</div><div class="sbody"><div class="stit">Assign it in User Settings</div><div class="kp"><span class="k">Avo</span><span class="karr">→</span><span class="k">[User Settings]</span><span class="karr">→</span>Lock tab<span class="karr">→</span>[Venue Mode Workspace]</div></div></li>
+    <li class="step"><div class="snum">3</div><div class="sbody"><div class="stit">Set Lock on Startup (optional)</div><div class="sdesc">Set console to boot directly into Venue Mode. Must have a Programmer Password set. Venue Mode password can be set separately so staff can lock/unlock venue mode without full access.</div></div></li>
+  </ul>
+  <div class="tip"><i class="ti ti-info-circle"></i><span>Venue Mode windows available: all Handle windows, Active Playbacks, Audio Triggers, Capture Visualiser, Channel Grid, DMX, Event Log, Intensity View, Pioneer DJ, Pixel Map Preview, Playback Groups, Timecode Windows, Video Multi View, Virtual Faders. Fixture selection is disabled but quick palettes still work.</span></div>
+  <p class="h3">Move function</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">Tidy up the console layout by moving handles around without breaking any programming links or references.</div>
+  <div class="kp"><span class="k">Move</span><span class="karr">→</span>select item(s)<span class="karr">→</span>touch destination</div>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-top:4px">Options: Bunch Up (removes gaps in a range), Swap Items If Required (moves blocking handles out of the way), Latch Menu (keep Move mode for multiple operations). If no Move button: hold Avo + press Copy.</div>
+  <p class="h3">Set List window</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">A Set List is a song-by-song list that automatically recalls a workspace and/or cue list for each song. Ideal for touring bands where each song has a different lighting setup.</div>
+  <div class="kp"><span class="k">Open/View</span><span class="karr">→</span><span class="k">[Set List]</span><span class="karr">→</span>add songs, assign workspaces and playbacks</div>
+  <p class="h3">External triggering</p>
+  <div class="row"><span class="badge">MIDI</span><span class="rlab">MIDI triggering</span><span class="rdesc">MIDI notes, program changes, and MIDI Show Control (MSC) messages can trigger playbacks, fire macros, or send Go commands. Configure in Running the Show → External Triggering.</span></div>
+  <div class="row"><span class="badge">DMX in</span><span class="rlab">DMX input triggering</span><span class="rdesc">An incoming DMX signal can trigger playbacks or macros. Map DMX channels to console actions in the trigger settings.</span></div>
+  <div class="row"><span class="badge">Audio</span><span class="rlab">Audio triggering</span><span class="rdesc">Connect audio via line-in (rear panel). Multi-band triggering assigns different frequency bands to different actions. Set up in System menu → Audio Triggers.</span></div>
+  <div class="row"><span class="badge">OSC</span><span class="rlab">OSC control</span><span class="rdesc">Open Sound Control (OSC) messages over network can trigger console functions. Enables integration with third-party control software.</span></div>
+  <div class="row"><span class="badge">Pioneer</span><span class="rlab">PioneerDJ link</span><span class="rdesc">Link to Pioneer DJ decks over network. Receive BPM, beat grid, and track position for beat-accurate lighting effects. Pioneer DJ window shows current BPM and beat position.</span></div>
+</div>
+
+<div id="s16" class="sec">
+  <p class="stitle"><i class="ti ti-device-mobile"></i>Remote control</p>
+  <p class="sintro">The free Titan Remote app (iOS and Android) lets you control the console from a tablet or phone over Wi-Fi. Full programming capability from anywhere in the venue — no return trip to FOH needed.</p>
+  <p class="h3">Titan Remote app capabilities</p>
+  <div class="cgrid">
+    <div class="card"><div class="clbl">Fixture selection</div><div class="cval">Full selection</div><div class="csub">Select fixtures and groups exactly as on the console</div></div>
+    <div class="card"><div class="clbl">Attribute control</div><div class="cval">All IPCGBES</div><div class="csub">Wheels, colour picker, position pad</div></div>
+    <div class="card"><div class="clbl">Palettes</div><div class="cval">Apply &amp; update</div><div class="csub">Touch to apply palettes to selected fixtures</div></div>
+    <div class="card"><div class="clbl">Playbacks</div><div class="cval">Trigger &amp; control</div><div class="csub">Faders, flash, and go buttons</div></div>
+    <div class="card"><div class="clbl">Programmer</div><div class="cval">Full access</div><div class="csub">Changes sync back to console in real time</div></div>
+    <div class="card"><div class="clbl">Network</div><div class="cval">Wi-Fi</div><div class="csub">Same network as the console</div></div>
+  </div>
+  <p class="h3">Setting up Remote</p>
+  <ul class="steplist">
+    <li class="step"><div class="snum">1</div><div class="sbody"><div class="stit">Connect console and device to same Wi-Fi network</div><div class="sdesc">The console must have a network connection (EtherCON/RJ45 on rear). If using a Wi-Fi router, connect the console by cable and the phone/tablet via Wi-Fi.</div></div></li>
+    <li class="step"><div class="snum">2</div><div class="sbody"><div class="stit">Install Titan Remote app</div><div class="sdesc">Available free from the Apple App Store (iOS) and Google Play Store (Android). The app version should match the console's Titan version.</div></div></li>
+    <li class="step"><div class="snum">3</div><div class="sbody"><div class="stit">Launch app and connect to console</div><div class="sdesc">The app should auto-discover the console on the network. If not discovered (known issue on some Android devices), enter the console's IP address manually.</div></div></li>
+  </ul>
+  <div class="warn"><i class="ti ti-alert-triangle"></i><span>Known issue: Android Titan Remote may not auto-discover the console on some networks due to Android network discovery limitations. If discovery fails, enter the console IP address manually in the app settings.</span></div>
+  <p class="h3">Multi-user operation</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">Multiple consoles (or a console + Remote) can share the same show over a network. Each user has their own programmer — changes don't interfere with each other's programming. All users see the same playback state.</div>
+  <div class="kp"><span class="k">Disk</span><span class="karr">→</span><span class="k">[Multi User]</span><span class="karr">→</span>Join existing session or start new</div>
+</div>
+
+<div id="s17" class="sec">
+  <p class="stitle"><i class="ti ti-network"></i>Networking</p>
+  <p class="sintro">Titan supports full professional lighting network protocols. The Quartz can control up to 64 universes total using TNP nodes, work in multi-console sessions, and run backup consoles for show-critical reliability.</p>
+  <p class="h3">DMX protocols</p>
+  <table class="tbl">
+    <tr><th>Protocol</th><th>What it is</th><th>When to use</th></tr>
+    <tr><td>DMX512 (XLR)</td><td>Direct hardware DMX over 5-pin XLR cable</td><td>Short distances, simple rigs, direct-connected fixtures</td></tr>
+    <tr><td>Art-Net</td><td>DMX over Ethernet (UDP packets)</td><td>Longer distances, multiple universes, remote DMX nodes</td></tr>
+    <tr><td>sACN (streaming ACN)</td><td>DMX over Ethernet (multicast)</td><td>Large scale, many universes, industry standard for larger shows</td></tr>
+  </table>
+  <p class="h3">TNP (TitanNet Processor)</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">The TNP is a rack-unit device that receives TitanNet data from the console over Ethernet and outputs physical DMX lines. Each TNP adds more DMX universes — up to a total of 64 universes across the console + all TNPs.</div>
+  <div class="row"><span class="badge">Connect</span><span class="rlab">Adding a TNP</span><span class="rdesc">Connect TNP to the same network as the console. In System menu → TitanNet, assign it to the session. Map DMX lines to TNP outputs in DMX Settings.</span></div>
+  <div class="row"><span class="badge">Mode</span><span class="rlab">TNP Console Mode</span><span class="rdesc">A TNP can also run as a lightweight console — loading a show file and outputting DMX independently. Used as a backup or secondary output node.</span></div>
+  <div class="warn"><i class="ti ti-alert-triangle"></i><span>On pre-Titan v12 show files loaded on newer software, TNP DMX line assignments may need to be manually re-assigned. Always verify DMX Settings after loading old show files.</span></div>
+  <p class="h3">Backup console</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">For show-critical reliability, a second console can run as a backup. The backup console syncs the show file from the master in real time. If the master fails, you manually switch the backup to take control.</div>
+  <div class="kp"><span class="k">Disk</span><span class="karr">→</span><span class="k">[Multi-User]</span><span class="karr">→</span><span class="k">[Backup]</span><span class="karr">→</span>link to master console session</div>
+  <div class="tip"><i class="ti ti-info-circle"></i><span>D9, D7, and Arena have an internal network switch with an independent UPS. This allows the network switch to keep running for ~5 minutes during a power cycle — so a backup console connected through the internal switch stays live even if the main console reboots. The Quartz has no internal switch — use an external switch.</span></div>
+  <p class="h3">Network best practices</p>
+  <div class="row"><span class="badge">IP</span><span class="rlab">IP addressing</span><span class="rdesc">Art-Net uses 2.x.x.x or 10.x.x.x subnet. sACN uses multicast. Consoles and nodes must be on the same subnet. Set static IPs — avoid DHCP for show-critical networks.</span></div>
+  <div class="row"><span class="badge">Iso</span><span class="rlab">Network isolation</span><span class="rdesc">Keep your lighting network isolated from venue Wi-Fi and internet. A separate switch dedicated to the lighting network prevents interference and packet loss.</span></div>
+</div>
+
+<div id="s18" class="sec">
+  <p class="stitle"><i class="ti ti-settings"></i>System settings</p>
+  <p class="sintro">The System menu (Avo + Disk) and User Settings (hold Avo → [User Settings]) contain all console configuration options. System = hardware setup. User Settings = personal preferences stored per user profile.</p>
+  <p class="h3">The System menu</p>
+  <table class="tbl">
+    <tr><th>System menu item</th><th>What it does</th></tr>
+    <tr><td>Display Setup</td><td>Enable/disable external monitor, set resolution</td></tr>
+    <tr><td>DMX Settings</td><td>Map DMX lines to physical XLR outputs, Art-Net nodes, sACN outputs, and TNPs</td></tr>
+    <tr><td>TitanNet Sessions</td><td>Manage multi-user and backup console connections</td></tr>
+    <tr><td>Synergy Settings</td><td>Configure Ai server connections for video integration</td></tr>
+    <tr><td>Audio Triggers</td><td>Configure audio input and multi-band trigger assignments</td></tr>
+    <tr><td>MIDI Triggers</td><td>Configure MIDI input channel and message mapping</td></tr>
+    <tr><td>Desk Lamp Brightness</td><td>Set brightness of connected desk lamps via wheels</td></tr>
+    <tr><td>User Settings</td><td>Opens full User Settings sub-menu (see below)</td></tr>
+    <tr><td>Key Profiles</td><td>Manage key profile sets (flash, latch, swop behaviour per button)</td></tr>
+    <tr><td>Upgrade Software</td><td>Install a new Titan version from USB stick</td></tr>
+    <tr><td>Recovery / Reinstall</td><td>Full console recovery via recovery USB stick (resets all show files and settings)</td></tr>
+    <tr><td>Curves</td><td>Edit dimmer response curves for different fixture or dimmer types</td></tr>
+  </table>
+  <p class="h3">Key Profiles</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">Key Profiles define how buttons behave. You can have different profiles for different buttons and switch between profile sets. Default profile behaviours:</div>
+  <table class="tbl">
+    <tr><th>Profile</th><th>Button behaviour</th></tr>
+    <tr><td>Flash</td><td>Hold = on, release = off (momentary)</td></tr>
+    <tr><td>Latch</td><td>Press to turn on, press again to turn off (toggle)</td></tr>
+    <tr><td>Swop</td><td>Turns this on, turns everything else off while held</td></tr>
+    <tr><td>Timed Flash</td><td>Flashes on, fades out over the cue's fade-out time</td></tr>
+    <tr><td>Fixture Latch</td><td>Fixture button turns on the dimmer at full (like a preset fader)</td></tr>
+  </table>
+  <p class="h3">User Settings (hold Avo → [User Settings]) — all tabs</p>
+  <div class="row"><span class="badge">General</span><span class="rlab">General tab</span><span class="rdesc">Default fade times, number entry mode (0-9 or 00-99 for intensities), and other core behaviour settings.</span></div>
+  <div class="row"><span class="badge">Handles</span><span class="rlab">Handles tab</span><span class="rdesc">Default key profile for all handles. Virtual hardware visibility setting.</span></div>
+  <div class="row"><span class="badge">Palettes</span><span class="rlab">Palettes tab</span><span class="rdesc">Master palette fade time. Palette display options. Quick palette behaviour.</span></div>
+  <div class="row"><span class="badge">Timeline</span><span class="rlab">Timeline tab</span><span class="rdesc">Default timecode source. Timeline behaviour options.</span></div>
+  <div class="row"><span class="badge">Wheels</span><span class="rlab">Wheels tab</span><span class="rdesc">Wheel sensitivity (Slow/Normal/Fast). Wheel display style. Trackball settings (Sapphire Touch only).</span></div>
+  <div class="row"><span class="badge">Clear</span><span class="rlab">Clear tab</span><span class="rdesc">All Clear button behaviour options (Action Precedence, Freeze Current Values, Auto Reset Mask, etc.) — these are persistent per user profile.</span></div>
+  <div class="row"><span class="badge">Effects</span><span class="rlab">Effects tab</span><span class="rdesc">Default shape and pixel mapper behaviour. Shape library preferences.</span></div>
+  <div class="row"><span class="badge">Lock</span><span class="rlab">Lock tab</span><span class="rdesc">Programmer Password. Venue Mode workspace assignment. Lock on Startup. Venue Mode password. Lock screen background image.</span></div>
+  <div class="row"><span class="badge">Display</span><span class="rlab">Display tab</span><span class="rdesc">Virtual Hardware visibility (show/hide virtual buttons when T3/Titan Mobile panel is connected). Screen layout options.</span></div>
+  <p class="h3">DMX Settings — configuring DMX outputs</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">In System menu → DMX Settings, you see a grid of DMX lines vs. output nodes. Connect lines to physical XLR outputs, Art-Net nodes, sACN universes, and TNP outputs. By default, lines 1–4 are connected to the 4 XLR outputs, and all lines have sACN enabled.</div>
+  <div class="tip"><i class="ti ti-info-circle"></i><span>If lights aren't responding, check DMX Settings first. The most common cause of "no output" is a DMX line that isn't connected to any output in this window.</span></div>
+  <p class="h3">Curves</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6">Curves define how dimmer channels respond to fader position. Linear = fader at 50% = output at 50%. Other curves: square law (more gradual at the bottom, faster at top), logarithmic, or custom S-curves. Set per dimmer channel in Patch View → Curves column.</div>
+  <p class="h3">Upgrading software</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">Download the latest Titan installer from avolites.com. Copy to a USB stick, plug into console, then:</div>
+  <div class="kp"><span class="k">Avo</span><span class="karr">+</span><span class="k">Disk</span><span class="karr">→</span><span class="k">[Upgrade Software]</span><span class="karr">→</span>follow on-screen instructions</div>
+  <p class="h3">Console recovery</p>
+  <div class="danger"><i class="ti ti-alert-octagon"></i><span>Recovery reinstalls Windows and Titan from scratch. ALL show files, personalities, and user settings are erased. Save show files to USB before running recovery. Create a recovery USB from a healthy console's Titan installer.</span></div>
+</div>
+
+<div id="s19" class="sec">
+  <p class="stitle"><i class="ti ti-video"></i>Synergy — Titan + Ai video integration</p>
+  <p class="sintro">Synergy connects the Quartz to Avolites Ai media servers, allowing you to control video playback alongside lighting from a single console. Requires an Ai server (Prism Zero, Prism One, or full Ai) on the same network.</p>
+  <div class="warn"><i class="ti ti-alert-triangle"></i><span>Critical limitation: Ai and Titan PC Suite (Titan Go / Titan Simulator) cannot run Synergy on the same PC host — they conflict. Synergy requires a dedicated Ai server machine separate from the Titan PC.</span></div>
+  <p class="h3">Setting up Synergy</p>
+  <ul class="steplist">
+    <li class="step"><div class="snum">1</div><div class="sbody"><div class="stit">Connect Ai server to console network</div><div class="sdesc">Same Ethernet network or switch as the console. Ensure IP addresses are on the same subnet.</div></div></li>
+    <li class="step"><div class="snum">2</div><div class="sbody"><div class="stit">Open Synergy Settings</div><div class="kp"><span class="k">Avo</span><span class="karr">+</span><span class="k">Disk</span><span class="karr">→</span><span class="k">[Synergy Settings]</span></div></div></li>
+    <li class="step"><div class="snum">3</div><div class="sbody"><div class="stit">Connect to the Ai server</div><div class="sdesc">The console discovers the Ai server on the network. Select it to connect. The Synergy session is established.</div></div></li>
+  </ul>
+  <p class="h3">Synergy features</p>
+  <table class="tbl">
+    <tr><th>Feature</th><th>What it does</th></tr>
+    <tr><td>Screen surfaces &amp; layers</td><td>Create and control video output surfaces and layers from the Titan interface. Each surface maps to an Ai output.</td></tr>
+    <tr><td>Media browser</td><td>Browse and upload media content from the console to the Ai server. Thumbnail previews of clips appear in the Attribute Editor.</td></tr>
+    <tr><td>Video Multi View</td><td>Monitor up to 6 NDI video streams from the Ai server simultaneously in a workspace window.</td></tr>
+    <tr><td>Lightmap</td><td>Maps live video output from the Ai server across the colour-mixing channels of LED fixtures in real time. The rig "replays" what's on the video screen.</td></tr>
+    <tr><td>Colour correction sliders</td><td>Fine-tune LED colour output to match the colour temperature and tint of the video screen for Lightmap accuracy.</td></tr>
+    <tr><td>Cue integration</td><td>Fade between video-source cues and traditional lighting cues seamlessly. Record video states into cues and cue lists.</td></tr>
+    <tr><td>Prism Zero / Prism One</td><td>Configure via Synergy Settings window. Prism products integrate more tightly with Titan for simplified setups.</td></tr>
+  </table>
+  <p class="h3">Fixture personalities</p>
+  <div class="sdesc" style="font-size:12px;line-height:1.6;margin-bottom:6px">Titan uses "personality" files to know how to control each fixture. If your fixture isn't in the built-in library:</div>
+  <div class="row"><span class="badge">DL</span><span class="rlab">Download personalities</span><span class="rdesc">Go to avolites.com → Support → Fixture Library. Download the latest library file and install it on the console.</span></div>
+  <div class="row"><span class="badge">Build</span><span class="rlab">Personality Builder</span><span class="rdesc">The Personality Builder application (installed on the console) lets you create a custom personality for any fixture not in the library. Access via Tools → Personality Builder.</span></div>
+  <div class="row"><span class="badge">Generic</span><span class="rlab">Generic personalities</span><span class="rdesc">In emergencies, use Generic Dimmer, Generic RGB, or Generic RGBA profiles to control any basic fixture type without a specific personality.</span></div>
+  <div class="row"><span class="badge">Avo</span><span class="rlab">Request from Avolites</span><span class="rdesc">Avolites can create a personality for you. Submit a request on their support page with the fixture's DMX chart.</span></div>
+</div>
+
+</div>
+
+<div class="footer">
+  <button class="nbtn" id="pb" onclick="nav(-1)" disabled><i class="ti ti-arrow-left"></i> Previous</button>
+  <span class="sctr" id="sc">Section 1 of 20</span>
+  <button class="nbtn" id="nb" onclick="nav(1)">Next <i class="ti ti-arrow-right"></i></button>
+</div>
+
+</div>
+
+<script>
+var cur=0,tot=20;
+function go(i){
+  document.querySelectorAll('.sec').forEach(function(s,x){s.classList.toggle('act',x===i)});
+  document.querySelectorAll('.tab').forEach(function(t,x){t.classList.toggle('act',x===i)});
+  cur=i;
+  document.getElementById('pf').style.width=Math.round(((i+1)/tot)*100)+'%';
+  document.getElementById('pb').disabled=i===0;
+  document.getElementById('nb').disabled=i===tot-1;
+  document.getElementById('sc').textContent='Section '+(i+1)+' of '+tot;
+  var tabs=document.getElementById('tabs');
+  var tab=tabs.querySelectorAll('.tab')[i];
+  if(tab){tab.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'})}
+}
+function nav(d){var n=cur+d;if(n>=0&&n<tot)go(n);}
+go(0);
+</script>
+</div><!-- /#app -->
+</body>
+</html>
